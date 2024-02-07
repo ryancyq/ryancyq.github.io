@@ -1,0 +1,5 @@
+sass:
+  style: compressed
+  sourcemap: development
+strict_front_matter: true
+timezone: Asia/Singapore
