@@ -10,12 +10,13 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-remote-theme
+
 # theme: minima
 # use then latest Minima version instead of bundled version in github pages
 remote_theme: jekyll/minima
 
 minima:
-  skin: classic
+  skin: auto
   date_format: "%d-%b-%Y"
   social_links:
     - platform: github

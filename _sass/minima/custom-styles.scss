@@ -40,20 +40,32 @@
     @media screen and (min-width: $on-large) {
       &:hover {
         border-radius: 999px;
-        background-color: $lm-brand-color-light
+        background-color: $lm-brand-color-dark
+      }
+      
+      @media (prefers-color-scheme: light) {
+        &:hover {
+          background-color: $lm-brand-color-light
+        }
       }
     }
   }
 
-  a[title="github"] .svg-icon {
-    color: #1B1F22
+  a .svg-icon {
+    color: #828282;
   }
 
-  a[title="linkedin"] .svg-icon {
-    color: #0072b1
-  }
+  @media (prefers-color-scheme: light) {
+    a[title="github"] .svg-icon {
+      color: #1B1F22
+    }
 
-  a[title="rss"] .svg-icon {
-    color: #f66a0a;
+    a[title="linkedin"] .svg-icon {
+      color: #0072b1
+    }
+
+    a[title="rss"] .svg-icon {
+      color: #f66a0a;
+    }
   }
 }
