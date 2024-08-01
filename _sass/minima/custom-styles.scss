@@ -1,0 +1,45 @@
+.site-footer {
+  padding: 15px 0;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footnote {
+    flex-shrink: 0;
+    
+    @include relative-font-size(0.9375);
+    color: $brand-color;
+  }
+
+  .social-links {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.pagination,
+.social-media-collection {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.social-media-collection li {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  a {
+    border: none;
+    padding: 8px;
+
+    &:hover {
+      border-radius: 999px;
+      background-color: $lm-brand-color-light
+    }
+  }
+}
