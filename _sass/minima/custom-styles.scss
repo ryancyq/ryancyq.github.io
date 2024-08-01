@@ -42,4 +42,16 @@
       background-color: $lm-brand-color-light
     }
   }
+
+  a[title="github"] .svg-icon {
+    color: #1B1F22
+  }
+
+  a[title="linkedin"] .svg-icon {
+    color: #0072b1
+  }
+
+  a[title="rss"] .svg-icon {
+    color: #f66a0a;
+  }
 }
