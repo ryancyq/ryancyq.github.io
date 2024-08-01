@@ -37,9 +37,11 @@
     border: none;
     padding: 8px;
 
-    &:hover {
-      border-radius: 999px;
-      background-color: $lm-brand-color-light
+    @media screen and (min-width: $on-large) {
+      &:hover {
+        border-radius: 999px;
+        background-color: $lm-brand-color-light
+      }
     }
   }
 
