@@ -5,6 +5,10 @@ author:
   name: Ryan Chang
 
 plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-remote-theme
 # theme: minima
 # use then latest Minima version instead of bundled version in github pages
@@ -26,3 +30,9 @@ sass:
   style: compressed
 markdown: kramdown
 highlighter: rouge
+
+# SEO and Site Configuration
+seo:
+  title: ryancyq
+  description: Enjoy solving real-world problems
+  author: Ryan Chang
