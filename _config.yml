@@ -32,6 +32,7 @@ markdown: kramdown
 highlighter: rouge
 
 # SEO and Site Configuration
+google_analytics: G-B3F2H65ZT2
 seo:
   title: ryancyq
   description: Enjoy solving real-world problems
