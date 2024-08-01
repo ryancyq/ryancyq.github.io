@@ -5,11 +5,12 @@ author:
   name: Ryan Chang
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-postcss
   - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # theme: minima
 # use then latest Minima version instead of bundled version in github pages
@@ -29,6 +30,8 @@ timezone: Asia/Singapore
 strict_front_matter: true
 sass:
   style: compressed
+postcss:
+  cache: false
 markdown: kramdown
 highlighter: rouge
 
