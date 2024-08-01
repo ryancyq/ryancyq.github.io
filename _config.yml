@@ -1,5 +1,26 @@
+title: ryancyq
+description: Enjoy solving real-world problems
+
+author:
+  name: Ryan Chang
+
+# theme: minima
+# use then latest Minima version instead of bundled version in github pages
+remote_theme: jekyll/minima
+
+minima:
+  skin: classic
+  date_format: "%d-%b-%Y"
+  social_links:
+    - platform: github
+      user_url: https://github.com/ryancyq
+    - platform: linkedin
+      user_url: https://www.linkedin.com/in/changyanqian/
+
+# Build Settings
+timezone: Asia/Singapore
+strict_front_matter: true
 sass:
   style: compressed
-  sourcemap: development
-strict_front_matter: true
-timezone: Asia/Singapore
+markdown: kramdown
+highlighter: rouge

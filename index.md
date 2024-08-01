@@ -1,14 +1,7 @@
 ---
-layout: default
-title: ryancyq
+layout: page
 ---
 
-## Yan Qian CHANG, Ryan
+Fullstack Engineer proficient in ASP.NET Core, Ruby on Rails, Java Spring Boot.
 
-Software Engineer worked with ASP.NET Core, Ruby on Rails, Java Spring Boot since 2016.
-
-Graduated from National University of Singapore, Computer Science.
-
-I enjoy contributing to open source projects on [github](https://github.com/ryancyq).
-
-Feel free to have a chat with me on [linkedin](https://www.linkedin.com/in/changyanqian/).
+Enjoy solving real-world problems.
