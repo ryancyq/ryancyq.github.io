@@ -27,6 +27,10 @@ postcss:
 markdown: kramdown
 highlighter: rouge
 
+exclude:
+  - "*.js"
+  - "*.json"
+
 # SEO and Site Configuration
 google_analytics: G-B3F2H65ZT2
 seo:
