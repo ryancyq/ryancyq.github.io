@@ -19,9 +19,9 @@ title: Thoughts
 
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
-    <div class="flex flex-col gap-y-2 max-w-sm md:max-w-md max-h-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex flex-col flex-auto basis-8 gap-y-2 min-w-sm max-w-sm md:max-w-md max-h-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-      <a href="{{ post.url | relative_url }}">
+      <a href="{{ post.url | relative_url }}" class="flex-grow">
           <h5 class="text-2xl font-bold tracking-tight line-clamp-2 md:line-clamp-4 text-gray-900 dark:text-white">{{ post.title | escape }}</h5>
       </a>
 
