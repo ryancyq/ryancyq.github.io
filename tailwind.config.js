@@ -7,9 +7,18 @@ module.exports = {
     './*.md',
     './*.html',
   ],
+  safelist: [
+    'text-github',
+    'text-linkedin',
+    'text-rss'
+  ],
   theme: {
-    theme: {
-      extend: {},
+    extend: {
+      colors: {
+        'github': '#1B1F22',
+        'linkedin': '#0072b1',
+        'rss': '#f66a0a'
+      }
     },
   },
   plugins: []
