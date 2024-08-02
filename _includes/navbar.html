@@ -1,6 +1,10 @@
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign nav_paths = site.nav_pages | default: default_paths -%}
-{%- if nav_paths.size > 0 -%}
+{%- assign nav_pages = "" | split: ',' -%}
+{%- for page in site.pages -%}
+  {%- if site.nav_pages contains page.path -%}
+    {%- assign nav_pages = nav_pages | push: page -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if nav_pages.size > 0 -%}
   <input id="navbar-cta" type="checkbox" class="hidden peer" />
   
   <div class="site-navbar flex md:order-2 md:hidden space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -20,11 +24,10 @@
   <div class="site-navbar-menu items-center justify-between hidden w-full peer-checked:block md:flex md:w-auto md:order-1">
 
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-    {%- for path in nav_paths -%}
-      {%- assign nav_page = site.pages | where: "path", path | first -%}
+    {%- for nav_page in nav_pages -%}
       {%- if nav_page.title -%}
       <li>
-      {%- if page.path == path  -%}
+      {%- if nav_page.path == path  -%}
         <a href="{{ nav_page.url | relative_url }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">
           {{ nav_page.title | escape }}
         </a>
