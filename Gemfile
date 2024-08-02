@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-# Specify the version of Ruby if necessary
-# ruby "2.7.4"
-
 # Jekyll
 gem "jekyll", "~> 4.3.3"
 
