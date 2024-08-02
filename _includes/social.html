@@ -1,14 +1,8 @@
 <ul class="social-media-collection">
-  {%- for entry in site.minima.social_links -%}
-    {%- include social-item.html item = entry -%}
+  {%- for entry in site.social_links -%}
+    {%- include social-item.html title = entry.title platform=entry.platform url=entry.user_url -%}
   {%- endfor -%}
       
   {%- assign rss_url = site.feed.path | default: 'feed.xml' | absolute_url %}
-  <li>
-    <a href="{{ rss_url }}" target="_blank" title="rss">
-      <svg class="svg-icon grey">
-        <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-      </svg>
-    </a>
-  </li>
+  {%- include social-item.html platform="rss" url=rss_url -%}
 </ul>
