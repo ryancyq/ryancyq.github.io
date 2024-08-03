@@ -13,6 +13,8 @@ plugins:
 
 nav_pages:
   - blog/index.html
+  - project.md
+  - resume.md
 
 social_links:
   - platform: github
