@@ -29,7 +29,7 @@ title: Blog
         <div class="font-normal line-clamp-3 md:line-clamp-6 text-gray-700 dark:text-gray-400">{{ post.excerpt }}</div>
       {%- endif -%}
 
-      <span class="self-end text-gray-700 dark:text-gray-400">Posted on {{ post.date | date: date_format }}</span>
+      <span class="self-end text-gray-700 dark:text-gray-400">{{ post.date | date: date_format }}</span>
 
     </div>
     {%- endfor -%}
