@@ -38,7 +38,9 @@ title: Blog
 {%- endif -%}
 
 {%- if site.paginate and paginator.total_pages > 1 -%}
-  {%- include pagination.html -%}
+  <div class="flex flex-row-reverse">
+    {%- include pagination.html -%}
+  </div>
 {%- endif -%}
 
 </div>
