@@ -12,7 +12,7 @@ plugins:
   - jekyll-sitemap
 
 nav_pages:
-  - blog.md
+  - blog/index.html
 
 social_links:
   - platform: github
