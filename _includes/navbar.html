@@ -1,7 +1,11 @@
 {%- assign nav_pages = "" | split: ',' -%}
+{%- assign unique_nav = "" | split: ',' -%}
 {%- for page in site.pages -%}
   {%- if site.nav_pages contains page.path and page.title -%}
-    {%- assign nav_pages = nav_pages | push: page -%}
+    {%- unless unique_nav contains page.path -%}
+      {%- assign unique_nav = unique_nav | push: page.path -%}
+      {%- assign nav_pages = nav_pages | push: page -%}
+    {%- endunless -%}
   {%- endif -%}
 {%- endfor -%}
 {%- if nav_pages.size > 0 -%}
