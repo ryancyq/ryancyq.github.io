@@ -1,38 +1,44 @@
 ---
 layout: base
 ---
-<article class="h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="h-entry px-4 md:px-2" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header>
-    <h1 class="p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
+  <header class="flex flex-col gap-y-6">
+
+    <h2 class="text-3xl font-semibold dark:text-white">{{ page.title | escape }}</h2>
+
+    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+
+    <div>
+      <span class="text-gray-400 dark:text-gray-600">
+        published: 
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: date_format }}
         </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
+      </span>
+
+      <span class="text-gray-400 dark:text-gray-600">
+        {%- if page.modified_date -%}
+          • modifed:
+          {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+          <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+            {{ mdate | date: date_format }}
+          </time>
+        {%- endif -%}
+        {%- if page.author -%}
+          • {% for author in page.author %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+              {%- if forloop.last == false %}, {% endif -%}
+          {% endfor %}
+        {%- endif -%}
+      </span>
+    </div>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="e-content pt-6 flex flex-col gap-y-4 text-gray-700 dark:text-gray-400" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
