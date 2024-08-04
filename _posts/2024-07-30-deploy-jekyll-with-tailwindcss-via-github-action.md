@@ -39,6 +39,8 @@ Otherwise, you can run the following command to add it:
 Following the steps in the [Jekyll documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/), the configuration would look something like this:
 
 ![Deploy with GitHub Actions](/assets/screenshots/2024-07-30/deploy-with-gha.png)
+
+Click on `Configure` under `GitHub Pages Jekyll` workflow.
 ![Configure GitHub Actions workflow](/assets/screenshots/2024-07-30/deploy-with-gha-configure-template.png)
 
 ### Step 3: Create GitHub Action Workflow
@@ -70,6 +72,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 ```
+
+Reference: [Official `actions/build-jekyll-for-github-pages`](https://github.com/marketplace/actions/build-jekyll-for-github-pages)
 
 ### Step 4: Add Node.js Setup for TailwindCSS
 
