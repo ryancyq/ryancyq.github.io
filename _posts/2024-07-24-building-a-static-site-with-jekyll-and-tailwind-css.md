@@ -4,7 +4,7 @@ title: "Building a Static Site with Jekyll and Tailwind CSS"
 tags: [jekyll, tailwind, tailwind-css]
 ---
 
-[Jekyll](https://jekyllrb.com/) is a great tool for building static sites, whether for your personal blog or a hobby project website. Additionally, integrating [Tailwind CSS](https://tailwindcss.com/) with Jekyll makes building your website easier and more visually appealing.
+[Jekyll](https://jekyllrb.com/) is a great tool for building static sites, whether for your personal blog or a hobby project website. With [Tailwind CSS](https://tailwindcss.com/), it makes building your website easier and more visually appealing.
 
 ## Prerequisites
 
