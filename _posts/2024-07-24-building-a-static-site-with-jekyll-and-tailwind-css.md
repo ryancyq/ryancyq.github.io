@@ -6,6 +6,10 @@ tags: [jekyll, tailwind, tailwind-css]
 
 [Jekyll](https://jekyllrb.com/) is a great tool for building static sites, whether for your personal blog or a hobby project website. With [Tailwind CSS](https://tailwindcss.com/), it makes building your website easier and more visually appealing.
 
+One major benefit of using Jekyll is gaining access to the free hosting offered by [GitHub Pages](https://docs.github.com/en/pages) for public repositories. If you're comfortable with this setup, GitHub Pages is a no-brainer choice.
+
+See my post on [Deploy Jekyll to GitHub Pages with TailwindCSS](https://www.ryancyq.com/posts/2024/07/30/deploy-jekyll-with-tailwindcss-via-github-action) for more information on deploying a custom Jekyll build to GitHub Pages.
+
 ## Prerequisites
 
 Make sure you have the required dependencies set up on your local machine.
