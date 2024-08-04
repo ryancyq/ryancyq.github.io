@@ -4,10 +4,6 @@ title: Blog
 ---
 
 <div class="px-4 md:px-2">
-{%- if page.title -%}
-  <h2 class="text-3xl font-semibold dark:text-white">{{ page.title | escape }}</h2>
-{%- endif -%}
-
 {% if site.paginate %}
   {% assign posts = paginator.posts %}
 {% else %}
