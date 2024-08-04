@@ -28,8 +28,6 @@ timezone: Asia/Singapore
 date_format: "%d-%b-%Y"
 strict_front_matter: true
 show_excerpts: true
-sass:
-  style: compressed
 postcss:
   cache: false
 markdown: kramdown
