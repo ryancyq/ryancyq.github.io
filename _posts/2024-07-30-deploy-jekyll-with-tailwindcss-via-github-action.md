@@ -4,7 +4,9 @@ title: "Deploy Jekyll to GitHub Pages with TailwindCSS"
 tags: [jekyll, github-pages, github-action, tailwind, tailwind-css]
 ---
 
-the process of setting up a custom deployment workflow using GitHub Actions to host your Jekyll site with TailwindCSS on GitHub Pages
+Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages requires a custom deployment workflow instead of the classic GitHub Pages deployment provided by GitHub.
+
+## Background
 
 For personal blogs, most people deploy from the `main` branch with the `root` folder, while project websites might opt to deploy from a separate branch like `gh-pages` with a `doc` folder in the `root`. [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
