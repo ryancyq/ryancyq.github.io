@@ -147,4 +147,4 @@ With `--livereload`, you can head over to the root directory and create any `md`
 
 Enjoy building your static site!
 
-[Deploy Jekyll to GitHub Pages with TailwindCSS]: {% link _posts/2024-07-30-deploy-jekyll-with-tailwindcss-via-github-action.md %}
+[Deploy Jekyll to GitHub Pages with TailwindCSS]: {% post_url 2024-07-30-deploy-jekyll-with-tailwindcss-via-github-action %}

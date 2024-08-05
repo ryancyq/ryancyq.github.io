@@ -95,4 +95,4 @@ After all these steps, you should see a successful build like this:
 
 And that's it! You've now set up a Jekyll site with TailwindCSS and deployed it using GitHub Actions. With this setup, you can take full advantage of Jekyll 4.x and any other dependencies you want to include!
 
-[Jekyll and TailwindCSS setup guide]: {% link _posts/2024-07-24-building-a-static-site-with-jekyll-and-tailwind-css.md %}
+[Jekyll and TailwindCSS setup guide]: {% post_url 2024-07-24-building-a-static-site-with-jekyll-and-tailwind-css %}
