@@ -2,7 +2,7 @@
     
   <nav class="container mx-auto flex flex-wrap items-baseline justify-between py-4 px-4 md:px-2">
 
-    <div class="flex items-baseline gap-x-2 max-w-xs md:max-w-md dark:text-white">
+    <div class="flex items-baseline gap-x-2 max-w-xs md:max-w-lg dark:text-white">
 
       <a class="flex-shrink-0 space-x-3 rtl:space-x-reverse" rel="author" href="{{ "/" | relative_url }}" >
         <span class="self-center text-2xl font-semibold whitespace-nowrap">
@@ -17,7 +17,7 @@
 
       <a class="truncate" href="{{ page.url | relative_url }}" >
         <span class="text-2xl font-semibold whitespace-nowrap">
-          {{ page.title | downcase | escape }}
+          {{ page.title | escape }}
         </span>
       </a>
       {%- endif -%}
