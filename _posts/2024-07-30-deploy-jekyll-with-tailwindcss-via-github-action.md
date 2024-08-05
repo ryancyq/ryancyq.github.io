@@ -4,41 +4,40 @@ title: "Deploy Jekyll to GitHub Pages with TailwindCSS"
 tags: [jekyll, github-pages, github-action, tailwind, tailwind-css]
 ---
 
-Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages requires a custom deployment workflow instead of the classic GitHub Pages deployment provided by GitHub.
+Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages is a bit different from the usual GitHub Pages deployment. You’ll need a custom deployment workflow, but don’t worry, it’s not too complicated!
 
-## Background
-
-For personal blogs, most people deploy from the `main` branch with the `root` folder, while project websites might opt to deploy from a separate branch like `gh-pages` with a `doc` folder in the `root`. [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+For personal blogs, most folks deploy from the `main` branch with the `root` folder, while project websites might deploy from a separate branch like `gh-pages` with a `doc` folder in the `root`. Check out [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for more details.
 
 ![Deploy from branch](/assets/screenshots/2024-07-30/deploy-from-branch.png)
 
-Once we settle on the basic setup, we might start looking for useful 3rd party libraries to improve our website. As GitHub Pages is built with Jekyll under the hood and has a safelist of supported Ruby gems, see [GitHub Pages supported versions](https://pages.github.com/versions/).
+Once you’ve got the basic setup, you might want to add some cool 3rd party libraries to enhance your website. GitHub Pages is powered by Jekyll and has a safelist of supported Ruby gems. See [GitHub Pages supported versions](https://pages.github.com/versions/) for the list.
 
-However, at the time of writing, GitHub Pages supports only up to Jekyll 3.x, and there are benefits to adopting Jekyll 4.x. On the other hand, there are also many potentials to improve the website through 3rd party libraries that are not safelisted.
+At the moment, GitHub Pages supports only up to Jekyll 3.x, but there are plenty of reasons to upgrade to Jekyll 4.x. Plus, there are many awesome 3rd party libraries that aren’t on the safelist.
 
 ## Deploy Custom Jekyll Build Pipeline
-To address this limitation, we can set up a GitHub Action workflow to bypass the default build pipeline offered by GitHub Pages.
 
-If we look at the [Jekyll official documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/), it explains the added benefits of using a GitHub Action workflow.
+To get around this, we can set up a GitHub Action workflow to bypass the default build pipeline offered by GitHub Pages.
 
-With that, we can introduce additional dependencies freely. For example, adding **TailwindCSS**, a popular utility-first CSS framework that emphasizes declarative styling in HTML, to make the website even more beautiful.
+The [Jekyll official documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) explains the benefits of using a GitHub Action workflow.
+
+This way, we can add dependencies like **TailwindCSS**, a super popular utility-first CSS framework that makes your website look amazing with minimal effort.
 
 ### Prerequisite
 
-Set up a working `jekyll` + `tailwindcss` on your local machine. See my post on [Jekyll and TailwindCSS setup guide](https://www.ryancyq.com/posts/2024/07/24/building-a-static-site-with-jekyll-and-tailwind-css).
+Make sure you have a working `jekyll` + `tailwindcss` setup on your local machine. See my post on [Jekyll and TailwindCSS setup guide].
 
 ### Step 1: Ensure `Gemfile.lock` Supports the OS on GitHub Action
 
-Most of the time, we use the `ubuntu` OS image in GitHub Action. To ensure `bundler` can install the dependencies with `ubuntu`, make sure your `Gemfile.lock` has `x86_64-linux` under `PLATFORMS`. 
+We usually use the `ubuntu` OS image in GitHub Action. To make sure `bundler` can install the dependencies with `ubuntu`, your `Gemfile.lock` should have `x86_64-linux` under `PLATFORMS`.
 
-Otherwise, you can run the following command to add it:
+If not, you can add it with this command:
 ```sh
   bundle lock --add-platform x86_64-linux
 ```
 
 ### Step 2: Select Page Deployment Approach
 
-Following the steps in the [Jekyll documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/), the configuration would look something like this:
+Following the [Jekyll documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/), your configuration will look something like this:
 
 ![Deploy with GitHub Actions](/assets/screenshots/2024-07-30/deploy-with-gha.png)
 
@@ -47,7 +46,7 @@ Click on `Configure` under `GitHub Pages Jekyll` workflow.
 
 ### Step 3: Create GitHub Action Workflow
 
-When prompted about workflow creation, we need to make some changes to the default template:
+When creating the workflow, you’ll need to tweak the default template a bit:
 ```yaml
 jobs:
   # Build job
@@ -75,11 +74,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 ```
 
-Reference: [Official `actions/build-jekyll-for-github-pages`](https://github.com/marketplace/actions/build-jekyll-for-github-pages)
+For reference, see the official [actions/build-jekyll-for-github-pages](https://github.com/marketplace/actions/build-jekyll-for-github-pages)
 
 ### Step 4: Add Node.js Setup for TailwindCSS
 
-We need to include Node.js setup and JavaScript dependencies installation with:
+Include Node.js setup and install JavaScript dependencies with:
 ```yaml
   - name: Setup Node
     uses: actions/setup-node@v4
@@ -91,5 +90,9 @@ We need to include Node.js setup and JavaScript dependencies installation with:
 
 ### Step 5: Push and Deploy
 
-With all the steps above, you should see a successful build like this:
+After all these steps, you should see a successful build like this:
 ![Deployment Successful](/assets/screenshots/2024-07-30/deployment-successful.png)
+
+And that's it! You've now set up a Jekyll site with TailwindCSS and deployed it using GitHub Actions. With this setup, you can take full advantage of Jekyll 4.x and any other dependencies you want to include!
+
+[Jekyll and TailwindCSS setup guide]: {% link _posts/2024-07-24-building-a-static-site-with-jekyll-and-tailwind-css.md %}

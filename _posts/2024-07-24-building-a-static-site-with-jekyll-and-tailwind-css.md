@@ -4,19 +4,19 @@ title: "Building a Static Site with Jekyll and Tailwind CSS"
 tags: [jekyll, tailwind, tailwind-css]
 ---
 
-[Jekyll](https://jekyllrb.com/) is a great tool for building static sites, whether for your personal blog or a hobby project website. With [Tailwind CSS](https://tailwindcss.com/), it makes building your website easier and more visually appealing.
+[Jekyll](https://jekyllrb.com/) is an awesome tool for building static sites, whether it's for your personal blog or a hobby project. Adding [Tailwind CSS](https://tailwindcss.com/) into the mix makes creating your site even easier and way more visually appealing.
 
-One major benefit of using Jekyll is gaining access to the free hosting offered by [GitHub Pages](https://docs.github.com/en/pages) for public repositories. If you're comfortable with this setup, GitHub Pages is a no-brainer choice.
+One huge advantage of using Jekyll is the free hosting you get with [GitHub Pages](https://docs.github.com/en/pages) for public repositories. If you're cool with this setup, GitHub Pages is a no-brainer.
 
-See my post on [Deploy Jekyll to GitHub Pages with TailwindCSS](https://www.ryancyq.com/posts/2024/07/30/deploy-jekyll-with-tailwindcss-via-github-action) for more information on deploying a custom Jekyll build to GitHub Pages.
+Check out my post on [Deploy Jekyll to GitHub Pages with TailwindCSS] for more details on deploying a custom Jekyll build to GitHub Pages.
 
 ## Prerequisites
 
-Make sure you have the required dependencies set up on your local machine.
+Make sure you have the necessary dependencies installed on your local machine.
 
 ## Step 1: Install Ruby and Jekyll
 
-Install Ruby using `rbenv` and the Jekyll gem. Follow [this guide](https://github.com/rbenv/rbenv#installation) to install `rbenv`.
+First things first, you need to install Ruby using `rbenv` and then get the Jekyll gem. Follow [this guide](https://github.com/rbenv/rbenv#installation) to install `rbenv`.
 
 ```sh
 # Install rbenv and Ruby
@@ -29,38 +29,40 @@ gem install jekyll bundler
 
 ## Step 2: Create a New Jekyll Site
 
-Create a new Jekyll site with a blank state.
+Now, let's create a new Jekyll site from scratch.
 ```sh
 jekyll new my-personal-blog --blank
 cd my-personal-blog
 ```
 
-Optionally, create a `.ruby-version` file for the Ruby version you have installed.
+Optionally, you can create a `.ruby-version` file for the Ruby version you have installed.
 ```sh
 echo "3.3.1" > .ruby-version
 ```
 
 ## Step 3: Install `jekyll-postcss` dependency for Ruby
 
-Add `jekyll-postcss` to the Gemfile.
+Add `jekyll-postcss` to your Gemfile.
 ```sh
 echo "gem 'jekyll-postcss', '~> 0.5.0'" >> Gemfile
 bundle install
 ```
 
-Configure `jekyll-postcss` by adding the following into your Jekyll `_config.yml`.
+Then configure `jekyll-postcss` by adding the following to your Jekyll `_config.yml`.
 ```yaml
 # _config.yml
 plugins:
   - jekyll-postcss
 
 postcss:
-  cache: false
+  cache: false # disable cache in favor of Tailwind CSS JIT engine
 ```
+
+Tailwind CSS 3.X has the Just-In-Time (JIT) engine enabled by default. For more details, refer to the [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/upgrade-guide#migrating-to-the-jit-engine).
 
 ## Step 4: Install Node and Tailwind CSS
 
-Install Node.js using `nvm`. Follow [this guide](https://github.com/nvm-sh/nvm#installing-and-updating) to install `nvm`. 
+Next, install Node.js using `nvm`. Follow [this guide](https://github.com/nvm-sh/nvm#installing-and-updating) to get `nvm` installed. 
 ```sh
 # Install Node.js LTS version
 nvm install --lts
@@ -80,6 +82,7 @@ npm install --save-dev tailwindcss postcss cssnano autoprefixer
 
 ## Step 5: Create PostCSS Config
 
+Now, create a `postcss.config.js` file with the following content:
 ```js
 // postcss.config.js
 module.exports = {
@@ -95,7 +98,7 @@ module.exports = {
 
 ## Step 6: Create Tailwind Config
 
-Specify the content (in this case, Markdown and HTML files) for Tailwind CSS to detect the usage of CSS classes. Only the CSS classes that are used will be compiled into the output CSS file (`assets/css/main.css`).
+Specify the content (Markdown and HTML files) for Tailwind CSS to detect the usage of CSS classes. Only the CSS classes that are used will be compiled into the output CSS file (`assets/css/main.css`).
 
 ```js
 // tailwind.config.js
@@ -117,7 +120,7 @@ module.exports = {
 
 ## Step 7: Remove Jekyll SASS
 
-Rename the default `scss` file provided by Jekyll at `assets/css/main.scss` to `assets/css/main.css`. Also change the content to the following:
+Rename the default `scss` file provided by Jekyll at `assets/css/main.scss` to `assets/css/main.css`. Also, change the content to the following:
 ```css
 /* assets/css/main.css */
 ---
@@ -132,7 +135,7 @@ Remove the `_sass` folder in the root directory as well to entirely get rid of t
 
 ## Step 8: Start the Jekyll Server
 
-Start the Jekyll server with live reload enabled.
+Finally, start the Jekyll server with live reload enabled.
 
 ```sh
 bundle exec jekyll serve --livereload
@@ -143,3 +146,5 @@ By following these steps, you'll have a Jekyll site styled with Tailwind CSS at 
 With `--livereload`, you can head over to the root directory and create any `md` or `html` files and start using Tailwind CSS classes like `text-blue-500` to see the changes reflected in real-time.
 
 Enjoy building your static site!
+
+[Deploy Jekyll to GitHub Pages with TailwindCSS]: {% link _posts/2024-07-30-deploy-jekyll-with-tailwindcss-via-github-action.md %}
