@@ -44,7 +44,7 @@ echo "3.3.1" > .ruby-version
 
 Add `jekyll-postcss` to your Gemfile.
 ```sh
-echo "gem 'jekyll-postcss', '~> 0.5.0'" >> Gemfile
+echo "gem 'jekyll-postcss', '~> 0.5.0', group: :jekyll_plugins" >> Gemfile
 bundle install
 ```
 
