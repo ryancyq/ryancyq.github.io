@@ -10,4 +10,5 @@ group :jekyll_plugins do
   gem "jekyll-postcss", "~> 0.5.0"
   gem "jekyll-seo-tag", "~> 2.7"
   gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-spaceship", "~> 0.10.2"
 end
