@@ -19,6 +19,18 @@ module.exports = {
         'github': '#1B1F22',
         'linkedin': '#0072b1',
         'rss': '#f66a0a'
+      },
+      typography: {
+        DEFAULT: {
+          css:{
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            }
+          }
+        }
       }
     },
   },
