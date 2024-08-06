@@ -7,7 +7,7 @@
 
   <div class="text-xs hidden print:block">
 
-    {%- if experience.frameworks.size -%}
+    {%- if experience.frameworks.size > 0 -%}
       <div>
 
         <span class="font-semibold">Skills: </span>
@@ -18,7 +18,7 @@
       </div>
     {%- endif-%}
 
-    {%- if experience.tools.size -%}
+    {%- if experience.tools.size > 0 -%}
       <div>
 
         <span class="font-semibold">Tools: </span>
