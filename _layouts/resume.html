@@ -22,57 +22,62 @@ layout: document
 
   <div class="flex flex-col">
 
-    <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
-      Experience
-    </h2>
-
     {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
     {%- if sorted_jobs.size > 0 -%}
-      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+      <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
+        Experience
+      </h2>
 
-      {%- for job in sorted_jobs -%}
-        {% include experience-card.html item = job %}
-      {%- endfor -%}
+      {%- if sorted_jobs.size > 0-%}
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
-      </div>
+        {%- for job in sorted_jobs -%}
+          {% include experience-card.html item = job %}
+        {%- endfor -%}
+
+        </div>
+      {%- endif -%}
     {%- endif -%}
 
   </div>
 
   <div class="flex-col hidden print:flex">
-
-    <h2 class="text-base font-bold uppercase flex border-b border-black">
-      Projects
-    </h2>
-
     {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
     {%- if sorted_projects.size > 0 -%}
-      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+      <h2 class="text-base font-bold uppercase flex border-b border-black">
+        Projects
+      </h2>
 
-      {%- for project in sorted_projects -%}
-        {% include experience-card.html item = project %}
-      {%- endfor -%}
+      {%- if sorted_projects.size > 0 -%}
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
-      </div>
+        {%- for project in sorted_projects -%}
+          {% include experience-card.html item = project %}
+        {%- endfor -%}
+
+        </div>
+      {%- endif -%}
     {%- endif -%}
 
   </div>
 
   <div class="flex-col hidden print:flex">
-
-    <h2 class="text-base font-bold uppercase flex border-b border-black">
-      Education
-    </h2>
 
     {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
     {%- if sorted_education.size > 0 -%}
-      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+      <h2 class="text-base font-bold uppercase flex border-b border-black">
+        Education
+      </h2>
+    
+      {%- if sorted_education.size > 0 -%}
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
-      {%- for education in sorted_education -%}
-        {% include experience-card.html item = education %}
-      {%- endfor -%}
+        {%- for education in sorted_education -%}
+          {% include experience-card.html item = education %}
+        {%- endfor -%}
 
-      </div>
+        </div>
+      {%- endif -%}
     {%- endif -%}
 
   </div>
