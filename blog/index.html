@@ -14,7 +14,7 @@ sub_title: false
 {%- if posts.size > 0 -%}
   <div class="py-4 flex flex-col md:flex-wrap gap-y-4 md:flex-row md:gap-x-6">
     {%- for post in posts -%}
-      {%- include post-card.html post = post date_format = site.date_format excerpts = true -%}
+      {%- include post-card.html item = post date_format = site.date_format excerpts = true -%}
     {%- endfor -%}
   </div>
 {%- endif -%}
