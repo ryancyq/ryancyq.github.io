@@ -9,8 +9,8 @@ permalink: /assets/social-icons.svg
 {% for entry in site.social_links %}
   {%- assign symbol_id = entry.platform -%}
   {%- unless symbol_id == "rss" -%}
-    {%- include svg_symbol.html key = symbol_id -%}
+    {%- include social-icons/{{ symbol_id }}.svg -%}
   {% endunless %}
 {%- endfor -%}
-{%- include svg_symbol.html key = "rss" -%}
+{%- include social-icons/rss.svg -%}
 </svg>
