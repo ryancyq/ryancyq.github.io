@@ -1,8 +1,8 @@
 <div class="flex pt-2  gap-x-2 sm:justify-center sm:mt-0">
   {%- for entry in site.social_links -%}
-    {%- include social-item.html title = entry.title platform=entry.platform url=entry.user_url -%}
+    {%- include social-badge.html title = entry.title platform=entry.platform url=entry.user_url -%}
   {%- endfor -%}
       
   {%- assign rss_url = site.feed.path | default: 'feed.xml' | absolute_url %}
-  {%- include social-item.html platform="rss" url=rss_url -%}
+  {%- include social-badge.html platform="rss" url=rss_url -%}
 </div>
