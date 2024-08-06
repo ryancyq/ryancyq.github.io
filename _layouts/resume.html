@@ -22,8 +22,8 @@ layout: document
 
   <div class="flex flex-col">
 
-    <h2 class="text-base font-bold uppercase hidden print:flex print:border-b print:border-black">
-      Professional Experience
+    <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
+      Experience
     </h2>
 
     {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
