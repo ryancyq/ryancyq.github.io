@@ -26,11 +26,11 @@ layout: document
       Professional Experience
     </h2>
 
-    {%- assign sorted = site.work | sort: 'till', 'last' | reverse -%}
-    {%- if sorted.size > 0 -%}
+    {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
+    {%- if sorted_jobs.size > 0 -%}
       <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
-      {%- for exp in sorted -%}
+      {%- for exp in sorted_jobs -%}
         {% include experience-card.html item = exp %}
       {%- endfor -%}
 
