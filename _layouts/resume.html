@@ -28,14 +28,34 @@ layout: document
 
     {%- assign sorted = site.work | sort: 'till', 'last' | reverse -%}
     {%- if sorted.size > 0 -%}
-
       <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+
       {%- for exp in sorted -%}
         {% include experience-card.html item = exp %}
       {%- endfor -%}
-      </div>
 
+      </div>
     {%- endif -%}
+
+  </div>
+
+  <div class="flex-col hidden print:flex">
+
+    <h2 class="text-md font-bold uppercase flex print:border-b print:border-black">
+      Projects Experience
+    </h2>
+
+    {%- assign sorted = site.projects | sort: 'till', 'last' | reverse -%}
+    {%- if sorted.size > 0 -%}
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+
+      {%- for exp in sorted -%}
+        {% include experience-card.html item = exp %}
+      {%- endfor -%}
+
+      </div>
+    {%- endif -%}
+
   </div>
 
 </div>
