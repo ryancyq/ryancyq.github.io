@@ -26,6 +26,7 @@ social_links:
 
 collections:
   work:
+  projects:
   posts:
     output: false
     permalink: /:collection/:categories/:year/:month/:day/:slug
