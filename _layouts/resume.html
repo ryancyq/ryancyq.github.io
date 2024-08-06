@@ -45,8 +45,8 @@ layout: document
       Projects
     </h2>
 
-    {%- assign sorted = site.projects | sort: 'till', 'last' | reverse -%}
-    {%- if sorted.size > 0 -%}
+    {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
+    {%- if sorted_projects.size > 0 -%}
       <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
       {%- for project in sorted_projects -%}
