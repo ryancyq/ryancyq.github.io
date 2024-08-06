@@ -20,6 +20,11 @@ social_links:
   - platform: linkedin
     user_url: https://www.linkedin.com/in/changyanqian/
 
+collections:
+  posts:
+    output: false
+    permalink: /:collection/:categories/:year/:month/:day/:slug
+
 paginate: 5
 paginate_path: "/blog/:num/"
 
@@ -27,16 +32,10 @@ paginate_path: "/blog/:num/"
 timezone: Asia/Singapore
 date_format: "%d-%b-%Y"
 strict_front_matter: true
-show_excerpts: true
 postcss:
   cache: false
 markdown: kramdown
 highlighter: rouge
-
-collections:
-  posts:
-    output: false
-    permalink: /:collection/:categories/:year/:month/:day/:slug
 
 exclude:
   - "*.js"
