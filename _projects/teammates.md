@@ -1,6 +1,6 @@
 ---
 label: teammates
-country: Open Source Project
+country: Open Source
 org: TEAMMATES
 team: github.com/TEAMMATES
 role: Senior Developer, GSoC Mentor

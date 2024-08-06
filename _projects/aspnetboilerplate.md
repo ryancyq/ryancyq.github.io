@@ -1,6 +1,6 @@
 ---
 label: aspnetboilerplate
-country: Open Source Project
+country: Open Source
 org: aspnetboilerplate
 team: github.com/aspnetboilerplate
 role: Maintainer
