@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<div class="flex flex-col py-4 px-4 md:px-2">
+
+  <div class="prose prose-slate dark:prose-invert flex-col max-w-none flex print:hidden ">
+    {{ page.summary | markdownify }}
+  </div>
+
+  <div class="prose text-black text-xs flex-col max-w-none hidden print:flex">
+    {{ content | markdownify }}
+  </div>
+
+</div>
+
+<div class="flex flex-col px-4 md:px-2">
+  <h2 class="text-md font-bold uppercase hidden print:flex print:border-b print:border-black">
+    Professional Experience
+  </h2>
+
+  {%- assign sorted = site.work | sort: 'till', 'last' | reverse -%}
+  {%- if sorted.size > 0 -%}
+    <div class="flex flex-col md:flex-row md:flex-wrap py-4 print:py-2 gap-y-4 md:gap-x-6">
+    {%- for exp in sorted -%}
+      {% include experience-card.html item = exp %}
+    {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>

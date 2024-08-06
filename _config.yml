@@ -21,6 +21,7 @@ social_links:
     user_url: https://www.linkedin.com/in/changyanqian/
 
 collections:
+  work:
   posts:
     output: false
     permalink: /:collection/:categories/:year/:month/:day/:slug

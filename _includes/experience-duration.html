@@ -1,0 +1,18 @@
+{%- assign date_format = include.date_format | default: "%b %Y" -%}
+<div>
+  {%- if include.since -%}
+    {%- assign sdate = include.since | date_to_xmlschema -%}
+    <time datetime="{{ sdate }}">{{ sdate | date: date_format }}</time>
+  {%- endif-%}
+
+  {%- if include.since -%}
+    <span>&nbsp;&mdash;&nbsp;</span>
+  {%- endif-%}
+
+  {%- if include.till -%}
+    {%- assign tdate = include.till | date_to_xmlschema -%}
+    <time datetime="{{ tdate }}">{{ tdate | date: date_format }}</time>
+  {%- else -%}
+    <span>Present</span>
+  {%- endif-%}
+</div>

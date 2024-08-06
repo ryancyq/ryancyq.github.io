@@ -1,0 +1,42 @@
+{%- assign experience = include.item -%}
+<div class="flex flex-col md:basis-[48%] gap-y-2 md:gap-y-4 p-6 rounded-lg light:bg-white border light:border-gray-200 light:shadow dark:bg-gray-800 dark:border-gray-700 print:bg-none print:border-none print:p-0">
+
+  <span class="sr-only">{{ experience.role }} at {{ experience.org }} in {{ experience.country }}</span>
+
+  {%- include organization-card.html item = experience date_format = include.date_format -%}
+
+  <div class="text-xs hidden print:block">
+
+    {%- if experience.frameworks.size -%}
+      <div>
+
+        <span class="font-semibold">Skills: </span>
+        {%- for framework in experience.frameworks-%}
+          <span>{{framework}}{%- unless forloop.last -%}&nbsp;&vert;&nbsp;{%- endunless-%}</span>
+        {%- endfor -%}
+
+      </div>
+    {%- endif-%}
+
+    {%- if experience.tools.size -%}
+      <div>
+
+        <span class="font-semibold">Tools: </span>
+        {%- for tool in experience.tools-%}
+          <span>{{tool}}{%- unless forloop.last -%}&nbsp;&vert;&nbsp;{%- endunless-%}</span>
+        {%- endfor -%}
+
+      </div>
+    {%- endif-%}
+
+  </div>
+
+  <div class="prose prose-sm prose-slate dark:prose-invert flex-col flex print:hidden ">
+    {{ exp.summary | markdownify }}
+  </div>
+
+  <div class="prose text-black text-xs max-w-none flex-col hidden print:flex">
+    {{ exp.content | markdownify }}
+  </div>
+
+</div>
