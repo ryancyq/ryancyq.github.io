@@ -1,0 +1,31 @@
+<header class="w-full px-4 md:px-2 py-2">
+
+  <div class="flex flex-col pb-1 items-center border-b border-black">
+
+    <h1 class="text-lg font-semibold whitespace-nowrap">
+      {{ site.author.first_name }}
+      <span class="uppercase">{{ site.author.last_name }}</span>
+    </h1>
+
+    <div class="text-xs">
+      {%- if site.author.email -%}
+        <a href="mailto:{{ site.author.email }}" class="text-blue-600 underline">{{ site.author.email }}</a>
+      {%- endif -%}
+
+      {%- if site.author.website -%}
+        {%- if site.author.email -%}&nbsp;&vert;&nbsp;{%- endif -%} 
+        {%- assign url = site.author.website | remove: "https" | remove: "://" -%}
+        <a href="{{ site.author.website }}" class="text-blue-600 underline">{{ url }}</a>
+      {%- endif -%}
+
+      {%- assign linkedin = site.social_links | where: 'platform', 'linkedin' | first -%}
+      {%- if linkedin -%}
+        {%- if site.author.email or site.author.website -%}&nbsp;&vert;&nbsp;{%- endif -%} 
+        {%- assign url = linkedin.user_url | remove: "https" | remove: "://" -%}
+        <a href="{{ linkedin.user_url  }}" class="text-blue-600 underline">{{ url }}</a>
+      {%- endif -%}
+    </div>
+
+  </div>
+
+</header>

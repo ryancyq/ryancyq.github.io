@@ -3,6 +3,10 @@ description: Solving real-world problems
 
 author:
   name: Ryan Chang
+  first_name: Yan Qian
+  last_name: Chang
+  email: ryancyq@gmail.com
+  website: https://ryancyq.com
 
 plugins:
   - jekyll-feed
@@ -18,7 +22,7 @@ social_links:
   - platform: github
     user_url: https://github.com/ryancyq
   - platform: linkedin
-    user_url: https://www.linkedin.com/in/changyanqian/
+    user_url: https://linkedin.com/in/changyanqian/
 
 collections:
   work:

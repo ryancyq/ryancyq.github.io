@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="bg-white dark:bg-gray-900">
+
+    <div class="print:hidden">
+      {%- include header.html -%}
+    </div>
+
+    <div class="hidden print:block">
+      {%- include resume_header.html -%}
+    </div>
+
+    <main class="page-content container mx-auto min-h-[calc(100vh-64px-120px)] md:min-h-[calc(100vh-64px-105px)] print:max-w-none" aria-label="Content">
+      {{ content }}
+    </main>
+
+    <div class="print:hidden">
+      {%- include footer.html -%}
+    </div>
+
+  </body>
+
+</html>
