@@ -27,6 +27,7 @@ social_links:
 collections:
   jobs:
   projects:
+  education:
   posts:
     output: false
     permalink: /:collection/:categories/:year/:month/:day/:slug

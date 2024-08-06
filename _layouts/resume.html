@@ -58,4 +58,23 @@ layout: document
 
   </div>
 
+  <div class="flex-col hidden print:flex">
+
+    <h2 class="text-md font-bold uppercase flex print:border-b print:border-black">
+      Education
+    </h2>
+
+    {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
+    {%- if sorted_education.size > 0 -%}
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+
+      {%- for exp in sorted_education -%}
+        {% include experience-card.html item = exp %}
+      {%- endfor -%}
+
+      </div>
+    {%- endif -%}
+
+  </div>
+
 </div>
