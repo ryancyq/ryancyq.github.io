@@ -4,7 +4,7 @@
   <div class="flex gap-x-4 items-center print:hidden">
 
     {%- if experience.logo.url -%}
-      <img src="{{ experience.logo.url | escape }}" class="object-contain w-12 h-12 md:w-16 md:h-16 dark:bg-white dark:rounded-md"/>
+      <img src="{{ experience.logo.url | escape }}" alt="{{ experience.org }}" title="{{ experience.org }}" class="object-contain w-12 h-12 md:w-16 md:h-16 dark:bg-white dark:rounded-md"/>
     {%- elsif experience.logo -%}
       <svg class="w-12 h-12 md:w-16 md:h-16 p-1 dark:bg-white dark:rounded-md" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
         <title>{{ experience.org }}</title>
