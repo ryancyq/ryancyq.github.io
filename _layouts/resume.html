@@ -61,11 +61,11 @@ layout: document
 
   </div>
 
-  <div class="flex-col hidden print:flex">
+  <div class="flex flex-col">
 
     {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
     {%- if sorted_education.size > 0 -%}
-      <h2 class="text-base font-bold uppercase flex border-b border-black">
+      <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
         Education
       </h2>
     
