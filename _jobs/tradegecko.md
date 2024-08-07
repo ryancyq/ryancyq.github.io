@@ -29,7 +29,7 @@ tools:
 summary: |
   - Implemented a self-served diagnostic tool for customer custom domain setup.
   - Optimized the image process pipeline across formats, minimizing time taken between image upload and availability.
-  - Designed responsive components in Ember.js with asynchronous and paginated request handling for large dataset
+  - Designed responsive components in Ember.js with asynchronous and paginated request handling for large dataset.
 ---
 
 - Implemented a self-served diagnostic tool for customer custom domain setup, eliminating related customer support tickets and reducing ticket resolution time by 80%.
