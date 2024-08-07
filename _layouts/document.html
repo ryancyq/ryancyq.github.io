@@ -5,13 +5,9 @@
 
   <body class="bg-white dark:bg-gray-900">
 
-    <div class="print:hidden">
-      {%- include header.html -%}
-    </div>
+    {%- include header.html class_names = "print:hidden" -%}
 
-    <div class="hidden print:block">
-      {%- include resume_header.html -%}
-    </div>
+    {%- include resume_header.html class_names = "hidden print:block" -%}
 
     <main class="page-content container mx-auto min-h-[calc(100vh-64px-120px)] md:min-h-[calc(100vh-64px-105px)] print:max-w-none" aria-label="Content">
       {{ content }}
