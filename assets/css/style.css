@@ -19,4 +19,8 @@
     width: 210mm;
     height: 297mm;
   }
+
+  .experience-card {
+    page-break-inside: avoid;
+  }
 }
