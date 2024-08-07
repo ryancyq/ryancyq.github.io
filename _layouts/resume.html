@@ -24,7 +24,7 @@ layout: document
 
     {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
     {%- if sorted_jobs.size > 0 -%}
-      <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
+      <h2 class="text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Experience
       </h2>
 
@@ -65,7 +65,7 @@ layout: document
 
     {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
     {%- if sorted_education.size > 0 -%}
-      <h2 class="text-lg font-bold flex py-2 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black print:text-base print:uppercase print:py-0">
+      <h2 class="text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Education
       </h2>
     
