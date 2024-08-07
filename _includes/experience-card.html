@@ -31,12 +31,16 @@
 
   </div>
 
-  <div class="prose prose-sm prose-slate dark:prose-invert flex-col flex print:hidden ">
-    {{ experience.summary | markdownify }}
-  </div>
+  {%- if experience.summary -%}
+    <div class="prose prose-sm prose-slate dark:prose-invert flex-col flex print:hidden ">
+      {{ experience.summary | markdownify }}
+    </div>
+  {%- endif -%}
 
-  <div class="prose text-black text-xs max-w-none flex-col hidden print:flex">
-    {{ experience.content | markdownify }}
-  </div>
+  {%- if experience.content -%}
+    <div class="prose text-black text-xs max-w-none flex-col hidden print:flex">
+      {{ experience.content | markdownify }}
+    </div>
+  {%- endif -%}
 
 </div>
