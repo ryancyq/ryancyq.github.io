@@ -1,7 +1,7 @@
 ---
-label: intuit
 country: Singapore
 org: Intuit Inc.
+logo: intuit
 team: Quickbooks Commerce
 role: Senior Software Engineer
 since: 2020-09-01

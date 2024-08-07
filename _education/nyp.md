@@ -1,5 +1,4 @@
 ---
-label: nyp
 country: Singapore
 org: Nanyang Polytechnics
 role: Diploma in Mechatronics Engineering

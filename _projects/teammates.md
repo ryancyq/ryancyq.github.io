@@ -1,5 +1,4 @@
 ---
-label: teammates
 country: Open Source
 org: TEAMMATES
 team: github.com/TEAMMATES

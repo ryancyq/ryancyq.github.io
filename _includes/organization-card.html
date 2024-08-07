@@ -3,19 +3,29 @@
 
   <div class="flex gap-x-4 items-center print:hidden">
 
-    <svg class="w-12 h-12 md:w-16 md:h-16 p-1 dark:bg-white dark:rounded-md" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-      <title>{{ experience.org }}</title>
-      <use href="{{ '/assets/organization-logos.svg#' | append: experience.label | relative_url }}"></use>
-    </svg>
+    {%- if experience.logo -%}
+      <svg class="w-12 h-12 md:w-16 md:h-16 p-1 dark:bg-white dark:rounded-md" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <title>{{ experience.org }}</title>
+        <use href="{{ '/assets/organization-logos.svg#' | append: experience.logo | relative_url }}"></use>
+      </svg>
+    {%- endif -%}
     
     <div class="text-gray-900 dark:text-white">
 
-      <span class="text-xl font-bold tracking-tight">
+      <div class="text-xl font-bold tracking-tight">
         {{ experience.role }}
-      </span>
+      </div>
 
-      <div class="text-sm font-thin tracking-tight">
-        {%- include experience-duration.html since = experience.since till = experience.till date_format = include.date_format -%}
+      <div class="flex items-baseline gap-x-2">
+
+        {%- unless experience.logo -%}
+          <span>{{ experience.org }}</span>
+        {%- endunless -%}
+
+        <span class="text-sm font-thin tracking-tight">
+          {%- include experience-duration.html since = experience.since till = experience.till date_format = include.date_format -%}
+        </span>
+  
       </div>
 
     </div>

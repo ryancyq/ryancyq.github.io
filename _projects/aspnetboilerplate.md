@@ -1,5 +1,4 @@
 ---
-label: aspnetboilerplate
 country: Open Source
 org: aspnetboilerplate
 team: github.com/aspnetboilerplate

@@ -1,7 +1,7 @@
 ---
-label: tradegecko
 country: Singapore
 org: Tradegecko Pte. Ltd.
+logo: tradegecko
 role: Senior Software Engineer
 since: 2018-09-03
 till: 2020-09-01

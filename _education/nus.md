@@ -1,5 +1,4 @@
 ---
-label: nus
 country: Singapore
 org: National University of Singapore
 role: Bachelor of Computing (Computer Science)
