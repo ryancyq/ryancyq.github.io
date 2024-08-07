@@ -9,3 +9,14 @@
 
 @import "tailwindcss/utilities";
 
+@media print {
+  @page {
+    size: A4;
+    margin: 2rem 1.25rem;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
