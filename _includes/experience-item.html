@@ -5,31 +5,33 @@
 
   {%- include organization-item.html item = experience date_format = include.date_format -%}
 
-  <div class="text-xs hidden print:block">
+  {%- if experience.frameworks.size > 0 -%}
+    <div class="text-xs gap-x-1 hidden print:flex">
 
-    {%- if experience.frameworks.size > 0 -%}
-      <div>
-
-        <span class="font-semibold">Skills: </span>
+      <span class="font-semibold">Skills:</span>
+      <span class="flex flex-wrap gap-x-1">
         {%- for framework in experience.frameworks-%}
-          <span>{{framework}}{%- unless forloop.last -%}&nbsp;&vert;&nbsp;{%- endunless-%}</span>
+          <span>{{framework}}</span>
+          <span>{%- unless forloop.last -%}&vert;{%- endunless-%}</span>
         {%- endfor -%}
+      </span>
 
-      </div>
-    {%- endif-%}
+    </div>
+  {%- endif-%}
 
-    {%- if experience.tools.size > 0 -%}
-      <div>
+  {%- if experience.tools.size > 0 -%}
+    <div class="text-xs gap-x-1 hidden print:flex">
 
-        <span class="font-semibold">Tools: </span>
-        {%- for tool in experience.tools-%}
-          <span>{{tool}}{%- unless forloop.last -%}&nbsp;&vert;&nbsp;{%- endunless-%}</span>
+      <span class="font-semibold">Tools:</span>
+      <span class="flex flex-wrap gap-x-1">
+        {%- for framework in experience.tools-%}
+          <span>{{framework}}</span>
+          <span>{%- unless forloop.last -%}&vert;{%- endunless-%}</span>
         {%- endfor -%}
+      </span>
 
-      </div>
-    {%- endif-%}
-
-  </div>
+    </div>
+  {%- endif-%}
 
   {%- if experience.summary -%}
     <div class="prose prose-sm prose-slate dark:prose-invert flex-col flex print:hidden ">
