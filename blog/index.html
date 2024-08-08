@@ -4,27 +4,28 @@ title: Blog
 sub_title: false
 ---
 
+{%- if site.paginate -%}
+  {%- assign posts = paginator.posts -%}
+{%- else -%}
+  {%- assign posts = site.posts -%}
+{%- endif -%}
+
 <div class="px-4 md:px-2">
-{% if site.paginate %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
 
-{%- if posts.size > 0 -%}
-  <div class="py-4 flex flex-col md:*:basis-[31%] md:flex-wrap gap-y-4 md:flex-row md:gap-x-6">
+  {%- if posts.size > 0 -%}
+    <div class="divide-y divide-gray-200 dark:divide-gray-700">
 
-    {%- for post in posts -%}
-      {%- include post-item.html item = post date_format = site.date_format excerpts = true -%}
-    {%- endfor -%}
+      {%- for post in posts -%}
+        {%- include post-item.html item = post date_format = site.date_format excerpts = true -%}
+      {%- endfor -%}
 
-  </div>
-{%- endif -%}
+    </div>
+  {%- endif -%}
 
-{%- if site.paginate and paginator.total_pages > 1 -%}
-  <div class="flex flex-row-reverse">
-    {%- include pagination.html -%}
-  </div>
-{%- endif -%}
+  {%- if site.paginate and paginator.total_pages > 1 -%}
+    <div class="flex flex-row-reverse">
+      {%- include pagination.html -%}
+    </div>
+  {%- endif -%}
 
 </div>
