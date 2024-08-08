@@ -29,7 +29,7 @@ layout: document
       </h2>
 
       {%- if sorted_jobs.size > 0-%}
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap md:*:basis-[48%] gap-y-4 md:gap-x-6">
 
         {%- for job in sorted_jobs -%}
           {% include experience-card.html item = job %}
@@ -49,7 +49,7 @@ layout: document
       </h2>
 
       {%- if sorted_projects.size > 0 -%}
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+        <div class="flex flex-col gap-y-4">
 
         {%- for project in sorted_projects -%}
           {% include experience-card.html item = project %}
@@ -70,7 +70,7 @@ layout: document
       </h2>
     
       {%- if sorted_education.size > 0 -%}
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap md:*:basis-[48%] gap-y-4 md:gap-x-6">
 
         {%- for education in sorted_education -%}
           {% include experience-card.html item = education %}
