@@ -24,7 +24,7 @@
     page-break-after: avoid;
   }
 
-  .experience-card {
+  .experience-item {
     page-break-inside: avoid;
   }
 }

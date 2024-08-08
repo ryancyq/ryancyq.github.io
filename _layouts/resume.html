@@ -4,7 +4,7 @@ layout: document
 
 <div class="flex flex-col gap-y-4 px-4 md:px-2 py-4 print:py-2">
 
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-y-4 print:gap-y-1">
 
     <h2 class="text-base font-bold uppercase hidden print:flex print:border-b print:border-black">
       Fullstack Engineer
@@ -20,19 +20,21 @@ layout: document
 
   </div>
 
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-y-4 print:gap-y-1">
 
     {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
     {%- if sorted_jobs.size > 0 -%}
-      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
+      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Experience
       </h2>
 
       {%- if sorted_jobs.size > 0-%}
-        <div class="flex flex-col md:flex-row md:flex-wrap md:*:basis-[48%] gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
         {%- for job in sorted_jobs -%}
-          {% include experience-card.html item = job %}
+          <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 print:bg-none print:border-none print:shadow-none">
+            {% include experience-item.html item = job %}
+          </div>
         {%- endfor -%}
 
         </div>
@@ -41,7 +43,7 @@ layout: document
 
   </div>
 
-  <div class="flex-col hidden print:flex">
+  <div class="flex-col gap-y-4 print:gap-y-1 hidden print:flex">
     {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
     {%- if sorted_projects.size > 0 -%}
       <h2 class="experience-header text-base font-bold uppercase flex border-b border-black">
@@ -52,7 +54,7 @@ layout: document
         <div class="flex flex-col gap-y-4">
 
         {%- for project in sorted_projects -%}
-          {% include experience-card.html item = project %}
+          {% include experience-item.html item = project %}
         {%- endfor -%}
 
         </div>
@@ -61,19 +63,21 @@ layout: document
 
   </div>
 
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-y-4 print:gap-y-1">
 
     {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
     {%- if sorted_education.size > 0 -%}
-      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
+      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Education
       </h2>
     
       {%- if sorted_education.size > 0 -%}
-        <div class="flex flex-col md:flex-row md:flex-wrap md:*:basis-[48%] gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
         {%- for education in sorted_education -%}
-          {% include experience-card.html item = education %}
+          <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 print:bg-none print:border-none print:shadow-none">
+            {% include experience-item.html item = education %}
+          </div>
         {%- endfor -%}
 
         </div>
@@ -82,13 +86,13 @@ layout: document
 
   </div>
 
-  <div class="flex-col hidden print:flex">
+  <div class="flex-col gap-y-4 print:gap-y-1 hidden print:flex">
 
     <h2 class="experience-header text-base font-bold uppercase flex border-b border-black">
       Language
     </h2>
 
-    <div class="experience-card text-black text-xs max-w-none">
+    <div class="experience-item text-black text-xs max-w-none">
         English, Mandarin
     </div>
 
