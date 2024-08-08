@@ -20,6 +20,10 @@
     height: 297mm;
   }
 
+  .experience-header {
+    page-break-after: avoid;
+  }
+
   .experience-card {
     page-break-inside: avoid;
   }

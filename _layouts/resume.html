@@ -24,7 +24,7 @@ layout: document
 
     {%- assign sorted_jobs= site.jobs | sort: 'till', 'last' | reverse -%}
     {%- if sorted_jobs.size > 0 -%}
-      <h2 class="text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
+      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Experience
       </h2>
 
@@ -44,7 +44,7 @@ layout: document
   <div class="flex-col hidden print:flex">
     {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
     {%- if sorted_projects.size > 0 -%}
-      <h2 class="text-base font-bold uppercase flex border-b border-black">
+      <h2 class="experience-header text-base font-bold uppercase flex border-b border-black">
         Projects
       </h2>
 
@@ -65,7 +65,7 @@ layout: document
 
     {%- assign sorted_education = site.education | sort: 'till', 'last' | reverse -%}
     {%- if sorted_education.size > 0 -%}
-      <h2 class="text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
+      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex pt-2 pb-4 md:pb-6 print:py-0 light:text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Education
       </h2>
     
@@ -84,11 +84,11 @@ layout: document
 
   <div class="flex-col hidden print:flex">
 
-    <h2 class="text-base font-bold uppercase flex border-b border-black">
+    <h2 class="experience-header text-base font-bold uppercase flex border-b border-black">
       Language
     </h2>
 
-    <div class="text-black text-xs max-w-none">
+    <div class="experience-card text-black text-xs max-w-none">
         English, Mandarin
     </div>
 
