@@ -4,20 +4,26 @@
 <div class="flex flex-col md:basis-[31%] p-6 gap-y-2 md:gap-y-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
   <a href="{{ post.url | relative_url }}" class="flex-grow">
-      <h5 class="text-2xl font-bold tracking-tight line-clamp-2 md:line-clamp-4 md:hover:underline text-gray-900 dark:text-white">{{ post.title | escape }}</h5>
+    <h5 class="text-2xl font-bold tracking-tight line-clamp-2 md:line-clamp-4 md:hover:underline text-gray-900 dark:text-white">{{ post.title | escape }}</h5>
   </a>
 
   {%- if excerpts_enabled -%}
-    <div class="font-normal line-clamp-3 md:line-clamp-6 text-gray-700 dark:text-gray-400">{{ post.excerpt }}</div>
+    <div class="font-normal line-clamp-3 md:line-clamp-6 text-gray-700 dark:text-gray-400">
+
+      {{ post.excerpt }}
+
+    </div>
   {%- endif -%}
 
   <div class="flex justify-between items-baseline">
 
     <a href="{{ post.url | relative_url }}" class="inline-flex font-medium items-center text-blue-700 dark:text-blue-500 hover:underline">
       Read more
+
       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
       </svg>
+
     </a>
 
     <span class="text-gray-700 dark:text-gray-400">{{ post.date | date: date_format }}</span>
