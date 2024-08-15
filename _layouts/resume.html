@@ -6,7 +6,7 @@ layout: document
 
   <div class="flex flex-col gap-y-4 print:gap-y-1">
 
-    <h2 class="text-base font-bold uppercase hidden print:flex print:border-b print:border-black">
+    <h2 class="font-bold uppercase hidden print:flex print:border-b print:border-black">
       Fullstack Engineer
     </h2>
 
@@ -14,7 +14,7 @@ layout: document
       {{ page.summary | markdownify }}
     </div>
 
-    <div class="prose text-black text-xs flex-col max-w-none hidden print:flex">
+    <div class="prose prose-sm text-black leading-normal flex-col max-w-none hidden print:flex">
       {{ content | markdownify }}
     </div>
 
@@ -29,7 +29,7 @@ layout: document
       </h2>
 
       {%- if sorted_jobs.size > 0-%}
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6 print:flex-col">
 
         {%- for job in sorted_jobs -%}
           <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 print:bg-none print:border-none print:shadow-none">
@@ -44,9 +44,10 @@ layout: document
   </div>
 
   <div class="flex-col gap-y-4 print:gap-y-1 hidden print:flex">
+
     {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
     {%- if sorted_projects.size > 0 -%}
-      <h2 class="experience-header text-base font-bold uppercase flex border-b border-black">
+      <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Projects
       </h2>
 
@@ -72,7 +73,7 @@ layout: document
       </h2>
     
       {%- if sorted_education.size > 0 -%}
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6 print:flex-col">
 
         {%- for education in sorted_education -%}
           <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 print:bg-none print:border-none print:shadow-none">
@@ -92,7 +93,7 @@ layout: document
       Language
     </h2>
 
-    <div class="experience-item text-black text-xs max-w-none">
+    <div class="experience-item text-black text-sm max-w-none">
         English, Mandarin
     </div>
 
