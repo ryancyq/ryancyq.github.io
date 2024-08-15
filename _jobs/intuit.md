@@ -18,7 +18,6 @@ tools:
   - ArgoCD
   - AWS Aurora PostgreSQL
   - AWS Wavefront
-  - Docker
   - Kubernetes
   - Splunk
 summary: |

@@ -9,7 +9,6 @@ frameworks:
   - Java
   - Java EE
   - Selenium
-tools:
   - MySQL
   - Google App Engine
 ---

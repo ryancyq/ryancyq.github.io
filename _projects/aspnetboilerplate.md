@@ -9,7 +9,6 @@ frameworks:
   - C#
   - ASP.NET Core
   - Entity Framework
-tools:
   - MSSQL
   - AppVeyor
   - VisualStudio
