@@ -14,6 +14,7 @@ plugins:
   - jekyll-postcss
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll/tagging
 
 nav_pages:
   - blog/index.html
@@ -24,6 +25,9 @@ social_links:
     user_url: https://github.com/ryancyq
   - platform: linkedin
     user_url: https://linkedin.com/in/changyanqian/
+
+tag_page_layout: tag
+tag_page_dir: topic
 
 collections:
   jobs:

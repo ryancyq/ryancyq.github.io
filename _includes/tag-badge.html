@@ -1,0 +1,4 @@
+{%- if include.tag -%}
+{%- assign tag_link = include.tag | prepend: '/topic/' | relative_url -%}
+  <a href="{{ tag_link }}" class="text-sm font-medium my-1 px-2.5 py-0.5 rounded text-nowrap bg-sky-100 text-blue-800 dark:bg-blue-200 md:hover:bg-sky-200 md:dark:hover:bg-blue-300">#{{ include.tag }}</a>
+{%- endif -%}

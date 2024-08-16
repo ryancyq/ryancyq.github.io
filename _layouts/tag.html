@@ -1,0 +1,31 @@
+---
+layout: base
+sub_title: false
+---
+
+<div class="px-4 md:px-2">
+
+  <div class="border border-gray-200 rounded-lg p-4 md:px-0 md:pb-0 md:border-none bg-white dark:bg-gray-900 dark:border-gray-700">
+    
+    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+      # {{ page.tag }}
+    </h3>
+
+  </div>
+
+  {%- include post-listing.html posts=page.posts -%}
+
+  <div class="flex flex-col gap-y-2 border border-gray-200 rounded-lg p-4 md:px-0 md:pb-0 md:border-none bg-white dark:bg-gray-900 dark:border-gray-700">
+    
+    <div class="text-lg text-gray-700 dark:text-gray-200">Recommended Topics</div>
+    <div class="flex flex-wrap gap-x-2 text-gray-900 dark:text-white">
+
+      {%- for tag in post.tags -%}      
+        {%- include tag-badge.html tag = tag -%}
+      {%- endfor -%}
+
+    </div>
+
+  </div>
+
+</div>
