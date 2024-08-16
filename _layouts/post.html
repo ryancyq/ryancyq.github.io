@@ -9,7 +9,7 @@ layout: base
 
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
 
-    <div class="flex flex-col md:flex-row md:gap-x-2 font-light text-gray-600 dark:text-gray-400">
+    <div class="flex flex-col gap-y-1 md:flex-row md:gap-x-2 font-light text-gray-600 dark:text-gray-400">
 
       <span class="inline-flex items-baseline gap-x-2" title="Published on">
       
@@ -35,6 +35,21 @@ layout: base
           </time>
         </span>
       {%- endif -%}    
+
+      {%- assign words = page.content | number_of_words -%}
+      {%- assign minutes = words | divided_by: site.words_per_minute -%}
+      {%- if minutes > 0 -%}
+        <span class="hidden font-extrabold md:block"> • </span>
+        <span class="inline-flex items-baseline gap-x-2" title="Read time">
+          <svg class="flex-shrink-0 self-center w-6 h-6 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+          </svg>
+
+          <span>
+            {{ minutes }} {% if minutes > 1 %}mins{% else %}min{% endif %} read
+          </span>
+        </span>
+      {%- endif -%}
 
     </div>
 
