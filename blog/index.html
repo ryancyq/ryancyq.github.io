@@ -11,21 +11,5 @@ sub_title: false
 {%- endif -%}
 
 <div class="px-4 md:px-2">
-
-  {%- if posts.size > 0 -%}
-    <div class="divide-y divide-gray-200 dark:divide-gray-700">
-
-      {%- for post in posts -%}
-        {%- include post-item.html item = post date_format = site.date_format excerpts = true -%}
-      {%- endfor -%}
-
-    </div>
-  {%- endif -%}
-
-  {%- if site.paginate and paginator.total_pages > 1 -%}
-    <div class="flex flex-row-reverse">
-      {%- include pagination.html -%}
-    </div>
-  {%- endif -%}
-
+  {% include post-listing.html posts = posts %}
 </div>
