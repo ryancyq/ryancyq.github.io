@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploy Jekyll to GitHub Pages with TailwindCSS"
-tags: [jekyll, github-pages, github-action, tailwind, tailwind-css]
+tags: [jekyll, github-pages, github-action, tailwind-css]
 ---
 
 Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages is a bit different from the usual GitHub Pages deployment. You’ll need a custom deployment workflow, but don’t worry, it’s not too complicated!
