@@ -13,7 +13,9 @@ However, we can achieve the same behavior by leveraging native HTML.
 ### Simple Navigation Menu
 
 Let's look at a simple navigation menu styled with Tailwind CSS.
-<div class="not-prose p-4 border rounded-lg border-gray-200 dark:border-gray-700">
+
+**Demo**
+<div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
   <nav class="flex justify-between">
     <a href="#">Playground</a>
     <ul class="inline-flex gap-x-2">
@@ -40,11 +42,12 @@ Let's look at a simple navigation menu styled with Tailwind CSS.
 
 Next, let's add the hamburger menu for screens smaller than `md` using an HTML `<button>`.
 
-<div class="not-prose p-4 border rounded-lg border-gray-200 dark:border-gray-700">
+**Demo**
+<div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
   <nav class="flex items-center justify-between">
     <a href="#">Playground</a>
     <div class="inline-flex gap-x-2 items-center">
-      <button class="">
+      <button>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
@@ -79,11 +82,12 @@ Next, let's add the hamburger menu for screens smaller than `md` using an HTML `
 
 Usually, handling the button `click` event to toggle menu visibility requires JavaScript. Here, we are going to use HTML `<label>` and `<input>` elements to replace the `<button>`. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label), the `<label>` element is designed to pass user interaction events to the associated `<input>` element via a matching `id`. We can utilize this design principle by placing the `<input>` tag anywhere in the HTML body.
 
-<div class="not-prose p-4 border rounded-lg border-gray-200 dark:border-gray-700">
+**Demo**
+<div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
   <nav class="flex items-center justify-between">
     <a href="#">Playground</a>
-    <input id="navbar-trigger-1" type="checkbox" class=""/>
-    <label for="navbar-trigger-1" class="">
+    <input id="navbar-trigger-1" type="checkbox"/>
+    <label for="navbar-trigger-1">
       <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
       </svg>
@@ -131,7 +135,8 @@ This is the reason behind placing the `<input>` outside of the `<label>` to achi
 
 Using `peer-{modifiers}`, we can now hide the `<input>` and add the `peer/hamburger` CSS class to allow the sibling `<ul>` CSS classes to bind with the `<input>` using `peer-checked/hamburger:inline-flex`.
 
-<div class="not-prose p-4 border rounded-lg border-gray-200 dark:border-gray-700">
+**Demo**
+<div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
   <nav class="flex flex-wrap items-center justify-between">
     <a href="#">Playground</a>
     <input id="navbar-trigger" type="checkbox" checked class="hidden peer/hamburger"/>
