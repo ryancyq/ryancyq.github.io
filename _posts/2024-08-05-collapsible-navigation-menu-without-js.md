@@ -140,11 +140,19 @@ Using `peer-{modifiers}`, we can now hide the `<input>` and add the `peer/hambur
   <nav class="flex flex-wrap items-center justify-between">
     <a href="#">Playground</a>
     <input id="navbar-trigger" type="checkbox" checked class="hidden peer/hamburger"/>
-    <label for="navbar-trigger" class="">
-      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-      </svg>
-    </label>
+    <div class="inline-flex items-center gap-x-4">
+      <div class="inline-flex items-center font-semibold text-blue-700 dark:text-sky-500">
+        Click Me
+        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+      </div>
+      <label for="navbar-trigger">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </label>
+    </div>
     <ul class="flex-col gap-y-2 mt-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 w-full hidden peer-checked/hamburger:inline-flex">
       <li><a href="#" class="hover:underline">Home</a></li>
       <li><a href="#" class="hover:underline">About</a></li>
