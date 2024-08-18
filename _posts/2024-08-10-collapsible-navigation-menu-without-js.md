@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A JavaScript-free Navigation Menu with Tailwind CSS
-tags: [html, tailwind-css]
+title: A JavaScript-free Responsive Navigation Menu with Tailwind CSS
+tags: [html, css, responsive, tailwind-css]
 ---
 
 If you are building a static website using Tailwind CSS and looking for a responsive, collapsible navigation menu that is JavaScript-free, I might have something for you.
