@@ -51,6 +51,15 @@ layout: base
         </span>
       {%- endif -%}
 
+      <span class="hidden font-extrabold md:block"> • </span>
+      <div class="flex flex-wrap gap-x-2">
+
+        {%- for tag in page.tags -%}      
+          {%- include tag-badge.html tag = tag -%}
+        {%- endfor -%}
+
+      </div>
+
     </div>
 
   </header>
