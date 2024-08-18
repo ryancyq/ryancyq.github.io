@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deploy Jekyll to GitHub Pages with TailwindCSS"
+title: Deploy Jekyll to GitHub Pages with TailwindCSS
 tags: [jekyll, github-pages, github-action, tailwind-css]
 ---
 

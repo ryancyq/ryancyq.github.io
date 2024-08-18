@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Static Site with Jekyll and Tailwind CSS"
+title: Building a Static Site with Jekyll and Tailwind CSS
 tags: [jekyll, tailwind-css]
 ---
 
