@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Jekyll
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.3.4"
 
 # Use GitHub Pages compatible dependencies
 group :jekyll_plugins do
