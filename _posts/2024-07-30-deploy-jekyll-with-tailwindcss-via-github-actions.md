@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Jekyll to GitHub Pages with TailwindCSS
-tags: [jekyll, github-pages, github-action, tailwind-css]
+tags: [jekyll, github-pages, github-actions, tailwind-css]
 ---
 
 Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages is a bit different from the usual GitHub Pages deployment. You’ll need a custom deployment workflow, but don’t worry, it’s not too complicated!
@@ -19,9 +19,9 @@ At the moment, GitHub Pages supports only up to Jekyll 3.x, but there are plenty
 
 ## Deploy Custom Jekyll Build Pipeline
 
-To get around this, we can set up a GitHub Action workflow to bypass the default build pipeline offered by GitHub Pages.
+To get around this, we can set up a GitHub Actions workflow to bypass the default build pipeline offered by GitHub Pages.
 
-The [Jekyll official documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) explains the benefits of using a GitHub Action workflow.
+The [Jekyll official documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) explains the benefits of using a GitHub Actions workflow.
 
 This way, we can add dependencies like **TailwindCSS**, a super popular utility-first CSS framework that makes your website look amazing with minimal effort.
 
@@ -29,9 +29,9 @@ This way, we can add dependencies like **TailwindCSS**, a super popular utility-
 
 Make sure you have a working `jekyll` + `tailwindcss` setup on your local machine. See my post on [Jekyll and TailwindCSS setup guide].
 
-### Step 1: Ensure `Gemfile.lock` Supports the OS on GitHub Action
+### Step 1: Ensure `Gemfile.lock` Supports the OS on GitHub Actions
 
-We usually use the `ubuntu` OS image in GitHub Action. To make sure `bundler` can install the dependencies with `ubuntu`, your `Gemfile.lock` should have `x86_64-linux` under `PLATFORMS`.
+We usually use the `ubuntu` OS image in GitHub Actions. To make sure `bundler` can install the dependencies with `ubuntu`, your `Gemfile.lock` should have `x86_64-linux` under `PLATFORMS`.
 
 If not, you can add it with this command:
 ```sh
@@ -53,7 +53,7 @@ Click on `Configure` under `GitHub Pages Jekyll` workflow.
   <figcaption>configure github actions for github-pages deployment</figcaption>
 </figure>
 
-### Step 3: Create GitHub Action Workflow
+### Step 3: Create a GitHub Actions Workflow
 
 When creating the workflow, you’ll need to tweak the default template a bit:
 ```yaml
