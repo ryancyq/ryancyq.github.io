@@ -57,8 +57,11 @@ Click on `Configure` under `GitHub Pages Jekyll` workflow.
 
 When creating the workflow, you’ll need to tweak the default template a bit:
 ```yaml
+# jekyll.yml
+name: Deploy Jekyll site to Pages
+# ... more
+
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -67,10 +70,8 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # replaced with major version to get latest updates
         with:
-          ruby-version: 3.3.1 # or create a .ruby-version
+          ruby-version: "3.3" # or create a .ruby-version
           bundler-cache: true
-
-        ### CHANGES TO BE INSERTED HERE ###
       
       - name: Setup Pages
         id: pages
@@ -89,12 +90,27 @@ For reference, see the official [actions/build-jekyll-for-github-pages](https://
 
 Include Node.js setup and install JavaScript dependencies with:
 ```yaml
-  - name: Setup Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20 # any node version would do, preferably an LTS version
-  - name: Install TailwindCSS dependencies
-    run: npm install
+# jekyll.yml
+name: Deploy Jekyll site to Pages
+# ... more
+
+jobs:
+  build:
+    steps:
+      # ... more
+
+      - name: Setup Ruby
+        # ... more
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # any node version would do, preferably an LTS version
+      - name: Install TailwindCSS dependencies
+        run: npm install
+
+      - name: Setup Pages
+        # ... more
 ```
 
 ### Step 5: Push and Deploy
