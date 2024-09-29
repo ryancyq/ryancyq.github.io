@@ -8,7 +8,10 @@ Setting up a Jekyll 4.x site with TailwindCSS on GitHub Pages is a bit different
 
 For personal blogs, most folks deploy from the `main` branch with the `root` folder, while project websites might deploy from a separate branch like `gh-pages` with a `doc` folder in the `root`. Check out [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for more details.
 
-![Deploy from branch](/assets/screenshots/2024-07-30/deploy-from-branch.png)
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-07-30/deploy-from-branch.png" alt="Deploy Github Pages from Branch"/>
+  <figcaption>deploy github-pages from branch</figcaption>
+</figure>
 
 Once you’ve got the basic setup, you might want to add some cool 3rd party libraries to enhance your website. GitHub Pages is powered by Jekyll and has a safelist of supported Ruby gems. See [GitHub Pages supported versions](https://pages.github.com/versions/) for the list.
 
@@ -39,10 +42,16 @@ If not, you can add it with this command:
 
 Following the [Jekyll documentation on GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/), your configuration will look something like this:
 
-![Deploy with GitHub Actions](/assets/screenshots/2024-07-30/deploy-with-gha.png)
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-07-30/deploy-with-gha.png" alt="Deploy Github Pages with Github Actions"/>
+  <figcaption>deploy github-pages with github actions</figcaption>
+</figure>
 
 Click on `Configure` under `GitHub Pages Jekyll` workflow.
-![Configure GitHub Actions workflow](/assets/screenshots/2024-07-30/deploy-with-gha-configure-template.png)
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-07-30/deploy-with-gha-configure-template.png" alt="Configure Github Actions for Github Pages Deployment"/>
+  <figcaption>configure github actions for github-pages deployment</figcaption>
+</figure>
 
 ### Step 3: Create GitHub Action Workflow
 
@@ -91,7 +100,11 @@ Include Node.js setup and install JavaScript dependencies with:
 ### Step 5: Push and Deploy
 
 After all these steps, you should see a successful build like this:
-![Deployment Successful](/assets/screenshots/2024-07-30/deployment-successful.png)
+
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-07-30/deployment-successful.png" alt="Github Pages Deployment Successful"/>
+  <figcaption>github-pages deployment successful</figcaption>
+</figure>
 
 And that's it! You've now set up a Jekyll site with TailwindCSS and deployed it using GitHub Actions. With this setup, you can take full advantage of Jekyll 4.x and any other dependencies you want to include!
 
