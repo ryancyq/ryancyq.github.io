@@ -12,7 +12,7 @@ However, for the case of a Ruby library or standalone application, it would be s
 
 In this post, I will discuss my experience in maintaining a Ruby library for different Ruby versions, gem dependencies, and OS versions. The example described below can also be found at [https://github.com/ryancyq/ruby-code-coverage](https://github.com/ryancyq/ruby-code-coverage)
 
-### Requirements
+### Prerequisites
 
 These are the libraries being used in this project:
 - [SimpleCov](https://github.com/simplecov-ruby/simplecov): A code coverage analysis tool for Ruby

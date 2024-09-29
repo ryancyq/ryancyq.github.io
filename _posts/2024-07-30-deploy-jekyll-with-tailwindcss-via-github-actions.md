@@ -25,7 +25,7 @@ The [Jekyll official documentation on GitHub Actions](https://jekyllrb.com/docs/
 
 This way, we can add dependencies like **TailwindCSS**, a super popular utility-first CSS framework that makes your website look amazing with minimal effort.
 
-### Prerequisite
+### Prerequisites
 
 Make sure you have a working `jekyll` + `tailwindcss` setup on your local machine. See my post on [Jekyll and TailwindCSS setup guide].
 
