@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ruby Code Coverage with Rake, RSpec, SimpleCov for Cross-Platform Compatibility
-tags: [ruby, simple-cov, rspec, rake, continuous-integration, code-coverage, cross-platform]
+title: Ruby Code Coverage with Rake, RSpec, SimpleCov for Backward Compatibility
+tags: [ruby, simple-cov, rspec, rake, continuous-integration, code-coverage]
 ---
 
 Code coverage in Ruby is pretty straightforward and easy to begin with, thanks to the amazing [SimpleCov](https://github.com/simplecov-ruby/simplecov) library, which has wide support for different testing frameworks.
