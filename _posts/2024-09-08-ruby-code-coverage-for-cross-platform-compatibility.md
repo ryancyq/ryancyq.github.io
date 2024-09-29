@@ -10,7 +10,7 @@ Conventionally, when running code coverage for web applications, the primary aim
 
 However, for the case of a Ruby library or standalone application, it would be slightly different.
 
-In this post, I will discuss my experience in maintaining a Ruby library for different Ruby versions, gem dependencies, and OS versions.
+In this post, I will discuss my experience in maintaining a Ruby library for different Ruby versions, gem dependencies, and OS versions. The example described below can also be found at [https://github.com/ryancyq/ruby-code-coverage](https://github.com/ryancyq/ruby-code-coverage)
 
 ### Requirements
 
