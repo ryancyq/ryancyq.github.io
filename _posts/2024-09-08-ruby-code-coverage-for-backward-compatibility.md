@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby Code Coverage with Rake, RSpec, SimpleCov for Backward Compatibility
+title: Ruby Code Coverage for Backward Compatibility
 tags: [ruby, simple-cov, rspec, rake, continuous-integration, code-coverage]
 ---
 
