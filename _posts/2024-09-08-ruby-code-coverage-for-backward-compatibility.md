@@ -4,24 +4,22 @@ title: Ruby Code Coverage for Backward Compatibility
 tags: [ruby, simple-cov, rspec, rake, continuous-integration, code-coverage]
 ---
 
-Code coverage in Ruby is pretty straightforward and easy to begin with, thanks to the amazing [SimpleCov](https://github.com/simplecov-ruby/simplecov) library, which has wide support for different testing frameworks.
+Code coverage in Ruby is straightforward, thanks to the [SimpleCov] library, which supports various testing frameworks. Typically, when running coverage for web applications, the focus is on examining line and branch coverage in a standardized environment, such as a server or Docker container. 
 
-Conventionally, when running code coverage for web applications, the primary aim is to examine line/branch coverage in a standardized machine environment, whether it is a server machine or a Docker container. Most of the time, we only test the current production environment or new OS or Runtime images for major updates.
+Most of the time, testing is limited to the current production environment or major updates in OS or runtime images. However, things are slightly different when it comes to Ruby libraries or standalone applications.
 
-However, for the case of a Ruby library or standalone application, it would be slightly different.
-
-In this post, I will discuss my experience in maintaining a Ruby library for different Ruby versions, gem dependencies, and OS versions. The example project demonstrated below can also be found at [https://github.com/ryancyq/ruby-code-coverage](https://github.com/ryancyq/ruby-code-coverage)
+In this post, I’ll share my experience maintaining a Ruby library across different Ruby versions, gem dependencies, and OS versions. You can also find the example at [ryancyq/ruby-code-coverage].
 
 ### Prerequisites
 
 These are the libraries being used in this project:
-- [SimpleCov](https://github.com/simplecov-ruby/simplecov): A code coverage analysis tool for Ruby
-- [RSpec](https://github.com/rspec/rspec): A behavior-driven development framework for Ruby
-- [Rake](https://github.com/ruby/rake): A Ruby build utility similar to Make
+- [SimpleCov] : A code coverage analysis tool for Ruby
+- [RSpec] : A behavior-driven development framework for Ruby
+- [Rake : A Ruby build utility similar to Make
 
 ### Code using different Ruby APIs
 
-For example, Ruby 3.1 introduced an improvement to the `File#dirname` method, allowing for parent directory retrieval with an optional level parameter. For more details, you can check the issue tracker at [Ruby Issue 12194](https://bugs.ruby-lang.org/issues/12194).
+For example, Ruby 3.1 introduced an improvement to the `File#dirname` method, allowing for parent directory retrieval with an optional level parameter. For more details, you can check the issue tracker at [Ruby Issue 12194].
 
 ```rb
 # lib/config.rb
@@ -36,7 +34,7 @@ end
 
 ### Write a Test with RSpec
 
-Now write a RSpec test for `Config::ROOT`
+Now write a [RSpec] test for `Config::ROOT`
 
 ```rb
 # spec/config_spec.rb
@@ -55,7 +53,7 @@ end
 
 ### RSpec Execution Approaches
 
-There are two ways to execute RSpec commands:
+There are two ways to execute [RSpec] commands:
 1. run `rspec` with CLI arguments. e.g. `rspec --require spec_helper --format documentation`.
 2. run the RSpec rake task with preconfigured setup.
 
@@ -93,7 +91,7 @@ Finished in 0.00058 seconds (files took 0.05219 seconds to load)
 
 ### Configure Code Coverage when Running RSpec
 
-With RSpec set up sucessfully, we can proceed with code coverage configuration. For this step, we will use the centeralized configuration file, `.simplecov` to initialize `SimpleCov` whenever `require 'simplecov'` statement is called. 
+With [RSpec] set up sucessfully, we can proceed with code coverage configuration. For this step, we will use the centeralized configuration file, `.simplecov` to initialize `SimpleCov` whenever `require 'simplecov'` statement is called. 
 
 Using the following configuration, the coverage report (`ruby-X.X.X` folder) will be generated in the folder specified by `ENV['COV_DIR']` or default to `coverage` folder in the current working directory.
 
@@ -122,7 +120,7 @@ namespace :coverage do
 end
 ```
 
-We also need to modify RSpec rake task to start `SimpleCov` during rspec execution. 
+We also need to modify RSpec rake task to start `SimpleCov` during [RSpec] execution. 
 ```rb
 # tasks/rspec.rake
 require "rspec/core/rake_task"
@@ -132,7 +130,7 @@ RSpec::Core::RakeTask.new(:spec, [:coverage]) do |config, args|
 end
 ```
 
-Using the [recommended apporach](https://github.com/simplecov-ruby/simplecov?#running-simplecov-against-spawned-subprocesses) to start `SimpleCov` for spawned subprocess. We are going to skip the step `SimpleCov.at_fork.call(Process.pid)` as the additional fork behavior is not required in this case.
+Following the [SimpleCov Spawn Subprocesses Guide] to start `SimpleCov` for spawned subprocesses, we’ll skip the `SimpleCov.at_fork.call(Process.pid)` step, as the additional fork behavior isn't needed in this case.
 
 ```rb
 # .simplecov_spawn.rb
@@ -140,27 +138,30 @@ require "simplecov"
 SimpleCov.start
 ```
 
-Now, run `rake --tasks` to see the updated rake tasks.
+Now, run `rake --tasks` to view the updated rake tasks:
+
 ```
 rake coverage:run     # Run coverage with spec
 rake spec[coverage]   # Run RSpec code examples
 ```
 
-When running the command `rake coverage:run` when `RUBY_VERSION` is `3.3.4`, we will see the following output.
+When running `rake coverage:run` with `RUBY_VERSION` set to `3.3.4`, the output will be:
+
 ```
 Coverage report generated for ruby-3.3.4 to /path/to/root/coverage/ruby-3.3.4.
 Line Coverage: 90.91% (10 / 11)
 Branch Coverage: 50.0% (1 / 2)
 ```
 
-Similar for `RUBY_VERSION 3.0.7`, we will see the same output.
+Similarly, with `RUBY_VERSION` set to `3.0.7`, you'll see:
+
 ```
 Coverage report generated for ruby-3.0.7 to /path/to/root/coverage/ruby-3.0.7.
 Line Coverage: 90.91% (10 / 11)
 Branch Coverage: 50.0% (1 / 2)
 ```
 
-However, the result is totally different.
+However, despite the identical output, the underlying results are completely different.
 
 <figure>
   <img src="{{site.url}}/assets/screenshots/2024-09-08/coverage-ruby-3.0.7.png" alt="Coverage Ruby 3.0.7"/>
@@ -205,7 +206,8 @@ desc "Run coverage analysis and collate coverage results"
 task coverage: ["coverage:run", "coverage:report"]
 ```
 
-Now, run `rake --tasks` to see the updated rake tasks.
+Now, run `rake --tasks` to view the updated rake tasks:
+
 ```
 rake coverage         # Run coverage analysis and collate coverage results
 rake coverage:report  # Collate coverage results generated by different test runners
@@ -213,7 +215,8 @@ rake coverage:run     # Run coverage with spec
 rake spec[coverage]   # Run RSpec code examples
 ```
 
-When running the command `rake coverage:report` and we will see the following output.
+When running `rake coverage:report`, the output will be:
+
 ```
 Coverage report generated for ruby-3.0.7, ruby-3.3.4 to /path/to/root/coverage.
 Line Coverage: 100.0% (11 / 11)
@@ -225,7 +228,7 @@ Branch Coverage: 100.0% (2 / 2)
   <figcaption>coverage/index.html</figcaption>
 </figure>
 
-The final project structure looks like this:
+The final project structure should look like this:
 ```
 ├── coverage
 │   ├── ruby-3.0.7
@@ -253,3 +256,11 @@ The final project structure looks like this:
 ├── .simplecov_spawn.rb
 └── Rakefile
 ```
+
+[ryancyq/ruby-code-coverage]: https://github.com/ryancyq/ruby-code-coverage
+[Ruby Issue 12194]: https://bugs.ruby-lang.org/issues/12194
+
+[SimpleCov]: https://github.com/simplecov-ruby/simplecov
+[RSpec]: https://github.com/rspec/rspec
+[Rake]: https://github.com/ruby/rake
+[Simple Cov Spawn Subprocesses Guide]: https://github.com/simplecov-ruby/simplecov?#running-simplecov-against-spawned-subprocesses
