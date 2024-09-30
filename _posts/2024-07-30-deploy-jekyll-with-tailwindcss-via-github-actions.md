@@ -56,6 +56,7 @@ Click on `Configure` under `GitHub Pages Jekyll` workflow.
 ### Step 3: Create a GitHub Actions Workflow
 
 When creating the workflow, you’ll need to tweak the default template a bit:
+{% raw %}
 ```yaml
 # jekyll.yml
 name: Deploy Jekyll site to Pages
@@ -83,6 +84,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 ```
+{% endraw %}
 
 For reference, see the official [actions/build-jekyll-for-github-pages](https://github.com/marketplace/actions/build-jekyll-for-github-pages)
 
