@@ -19,6 +19,7 @@ plugins:
 nav_pages:
   - blog/index.html
   - resume.md
+page_sub_title: false
 
 social_links:
   - platform: github
