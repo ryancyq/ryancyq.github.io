@@ -3,13 +3,13 @@ layout: base
 ---
 <article class="h-entry px-4 md:px-2" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="flex flex-col gap-y-2">
+  <header class="flex flex-col gap-y-2 items-center">
 
-    <h2 class="text-3xl font-semibold dark:text-white">{{ page.title | escape }}</h2>
+    <h2 class="text-3xl font-semibold text-center dark:text-white">{{ page.title | escape }}</h2>
 
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
 
-    <div class="flex flex-col gap-y-1 xl:flex-row xl:items-center xl:gap-x-2 font-light text-gray-900 dark:text-gray-200">
+    <div class="flex flex-col gap-y-1 items-center xl:flex-row xl:gap-x-2 font-light text-gray-900 dark:text-gray-200">
 
       <span class="inline-flex gap-x-2" title="Published on">
       
@@ -52,7 +52,7 @@ layout: base
       {%- endif -%}
 
       <span class="hidden font-extrabold xl:block"> • </span>
-      <div class="flex flex-wrap gap-x-2">
+      <div class="flex flex-wrap gap-x-2 justify-center">
 
         {%- for tag in page.tags -%}      
           {%- include tag-badge.html tag = tag -%}
