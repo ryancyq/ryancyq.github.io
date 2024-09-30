@@ -85,7 +85,7 @@ coverage
 The coverage result from each Ruby version will be uploaded to [GitHub Actions Artifacts].
 <figure>
   <img src="{{site.url}}/assets/screenshots/2024-09-15/code-coverage-artifacts.png" alt="Code Coverage Artifacts"/>
-  <figcaption>Code Coverage results uploaded</figcaption>
+  <figcaption>Code Coverage results uploaded to CodeCov</figcaption>
 </figure>
 
 ### Collate Coverage Reports from Test Runners
@@ -247,7 +247,24 @@ jobs:
 ```
 {% endraw %}
 
-In the modified `report` job, we removed the need for `ruby-setup` for coverage result collation. Also, we will only be downloading the artifact one at a time instead.
+In the modified `report` job, we've removed the need for `ruby-setup` to collate coverage results, and artifacts are now downloaded one at a time.
+
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-09-15/code-coverage-codecov-flags.png" alt="CodeCov with flags"/>
+  <figcaption>Code Coverage uploaded to CodeCov with flags</figcaption>
+</figure>
+
+The coverage report for each Ruby version remains around 91% due to the `if-else` statement on `RUBY_VERSION`.
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-09-15/codecov-reporting-flags.png" alt="CodeCov Report for flags"/>
+  <figcaption>CodeCov Report for flags</figcaption>
+</figure>
+
+However, the overall code coverage stays at 100% as the result of merging the individual coverage reports.
+<figure>
+  <img src="{{site.url}}/assets/screenshots/2024-09-15/codecov-reporting.png" alt="Overall CodeCov Report"/>
+  <figcaption>Overall CodeCov Report</figcaption>
+</figure>
 
 [Ruby Code Coverage setup guide]: {% post_url 2024-09-08-ruby-code-coverage-for-backward-compatibility %}
 
