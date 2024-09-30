@@ -4,7 +4,7 @@ title: A JavaScript-free Responsive Navigation Menu with Tailwind CSS
 tags: [html, css, responsive, tailwind-css]
 ---
 
-If you are building a static website using Tailwind CSS and looking for a responsive, collapsible navigation menu that is JavaScript-free, I might have something for you.
+If you are building a static website using [Tailwind CSS] and looking for a responsive, collapsible navigation menu that is JavaScript-free, I might have something for you.
 
 To create responsive navigation menus, it often involves using a "hamburger" menu for small screen widths and a regular navbar for larger screens. The conventional way of achieving a collapsible navigation menu is by attaching a JavaScript event handler to the `hamburger` menu to toggle the menu's visibility on the `click` event.
 
@@ -12,7 +12,7 @@ However, we can achieve the same behavior by leveraging native HTML.
 
 ### Simple Navigation Menu
 
-Let's look at a simple navigation menu styled with Tailwind CSS.
+Let's look at a simple navigation menu styled with [Tailwind CSS].
 
 **Demo**
 <div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
@@ -80,7 +80,7 @@ Next, let's add the hamburger menu for screens smaller than `md` using an HTML `
 </nav>
 ```
 
-Usually, handling the button `click` event to toggle menu visibility requires JavaScript. Here, we are going to use HTML `<label>` and `<input>` elements to replace the `<button>`. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label), the `<label>` element is designed to pass user interaction events to the associated `<input>` element via a matching `id`. We can utilize this design principle by placing the `<input>` tag anywhere in the HTML body.
+Usually, handling the button `click` event to toggle menu visibility requires JavaScript. Here, we are going to use HTML `<label>` and `<input>` elements to replace the `<button>`. According to [HTML label element] definition, the `<label>` element is designed to pass user interaction events to the associated `<input>` element via a matching `id`. We can utilize this design principle by placing the `<input>` tag anywhere in the HTML body.
 
 **Demo**
 <div class="not-prose p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
@@ -120,7 +120,7 @@ Usually, handling the button `click` event to toggle menu visibility requires Ja
 
 ### Tailwind CSS Peer Modifier
 
-Next, we are going to use a [CSS attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) on siblings to toggle menu visibility. This is where **Tailwind CSS** [`peer-{modifier}`](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state) comes in handy.
+Next, we are going to use a [CSS attribute selector] on siblings to toggle menu visibility. This is where [Tailwind CSS peer-{modifier}] comes in handy.
 
 This is the reason behind placing the `<input>` outside of the `<label>` to achieve the following hierarchy:
 ```html
@@ -185,4 +185,9 @@ Using `peer-{modifiers}`, we can now hide the `<input>` and add the `peer/hambur
 </nav>
 ```
 
-And with that, you've created a fully functional, responsive navigation menu using Tailwind CSS—completely free of JavaScript, making it an ideal solution for lightweight, static websites.
+And with that, you've created a fully functional, responsive navigation menu using [Tailwind CSS], completely free of JavaScript, making it an ideal solution for lightweight, static websites.
+
+[HTML label element]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+[CSS attribute selector]: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+[Tailwind CSS]: https://tailwindcss.com
+[Tailwind CSS peer-{modifier}]: https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state
