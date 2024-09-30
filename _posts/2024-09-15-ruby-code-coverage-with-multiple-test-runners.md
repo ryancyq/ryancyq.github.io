@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby Code Coverage with Multiple Test Runners
+title: Multiple Test Runners for Ruby Code Coverage with CodeCov
 tags: [ruby, github-actions, codecov, continuous-integration, code-coverage]
 ---
 
