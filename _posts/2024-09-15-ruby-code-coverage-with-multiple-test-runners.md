@@ -6,7 +6,7 @@ tags: [ruby, github-actions, codecov, continuous-integration, code-coverage]
 
 In Ruby development, maintaining code quality across versions is crucial. This post demonstrates how to set up a workflow to test your code across versions and generate detailed coverage reports, keeping your project robust as Ruby evolves.
 
-If you don’t already have a working setup for Ruby code coverage, I recommend checking out my [Ruby Code Coverage Setup Guide], where I explain how to configure coverage reports for different dependencies and runtimes via test runners.
+If you don’t already have a working setup for Ruby code coverage, I recommend checking out my [Ruby Code Coverage Setup Guide], where I explain how to configure coverage reports for different dependencies and runtimes via test runners.  You can also find the example at [ryancyq/ruby-code-coverage].
 
 ### Prerequisites
 
@@ -267,6 +267,7 @@ However, the overall code coverage stays at 100% as the result of merging the in
 </figure>
 
 [Ruby Code Coverage setup guide]: {% post_url 2024-09-08-ruby-code-coverage-for-backward-compatibility %}
+[ryancyq/ruby-code-coverage]: https://github.com/ryancyq/ruby-code-coverage
 
 [CodeCov]: https://codecov.io/
 [CodeCov Action]: https://github.com/codecov/codecov-action
