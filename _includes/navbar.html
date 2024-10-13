@@ -8,40 +8,61 @@
     {%- endunless -%}
   {%- endif -%}
 {%- endfor -%}
-{%- if nav_pages.size > 0 -%}
-  <input id="navbar-cta" type="checkbox" class="hidden peer/navbar" />
+
+<input id="theme-cta" type="checkbox" class="hidden" />
+<input id="navbar-cta" type="checkbox" class="hidden peer/navbar" />
+<div class="hidden md:block md:flex-grow"></div>
+
+<div class="flex space-x-2 md:space-x-0 rtl:space-x-reverse">
   
-  <div class="flex md:order-2 md:hidden space-x-3 md:space-x-0 rtl:space-x-reverse">
+  <label for="theme-cta" class="rounded-lg p-2 md:hover:bg-gray-100 md:hover:bg-transparent dark:md:hover:bg-gray-700 dark:md:hover:bg-transparent group/theme">
 
-    <label for="navbar-cta" class="inline-flex items-center p-2 justify-center text-sm text-gray-500 rounded-lg md:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:md:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Switch to light / dark theme</span>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-5 dark:hidden">
+      <path class="fill-gray-400 md:group-hover/theme:fill-cyan-600" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+      <path class="fill-gray-500 md:group-hover/theme:fill-cyan-800" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+    </svg>
 
-      <span class="sr-only">Open main menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-5 hidden dark:block">
+      <path class="fill-gray-300 md:group-hover/theme:fill-cyan-500" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+      <path class="fill-gray-500 md:group-hover/theme:fill-cyan-700" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+    </svg>
 
-      <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-      </svg>
+  </label>
 
-    </label>
+  {%- if nav_pages.size > 0 -%}
+  <label for="navbar-cta" class="inline-flex items-center justify-center p-2 md:hidden text-sm text-gray-500 rounded-lg md:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:md:hover:bg-gray-700 dark:focus:ring-gray-600">
 
-  </div>
+    <span class="sr-only">Open main menu</span>
 
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 peer-checked/navbar:block">
+    <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+    </svg>
 
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-    {%- for nav_page in nav_pages -%}
-      <li>
-      {%- if nav_page.path == page.path  -%}
-        <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-white bg-cyan-700 md:bg-transparent md:text-cyan-700 md:p-0 md:dark:text-cyan-500" aria-current="page">
-          {{ nav_page.title | escape }}
-        </a>
-      {%- else -%}
-        <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0  dark:hover:bg-gray-700 dark:hover:text-white dark:md:hover:bg-transparent dark:md:hover:text-cyan-500">
-          {{ nav_page.title | escape }}
-        </a>
-      {%- endif -%}
-      </li>
-    {%- endfor -%}
-    </ul>
+  </label>
+  {%- endif -%}
 
-  </div>
+</div>
+
+{%- if nav_pages.size > 0 -%}
+<div class="items-center justify-between hidden w-full md:flex md:w-auto peer-checked/navbar:block">
+
+  <ul class="flex flex-col p-4 md:p-0 mt-2 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+  {%- for nav_page in nav_pages -%}
+    <li>
+    {%- if nav_page.path == page.path  -%}
+      <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-white bg-cyan-700 md:bg-transparent md:text-cyan-700 md:p-0 md:dark:text-cyan-500" aria-current="page">
+        {{ nav_page.title | escape }}
+      </a>
+    {%- else -%}
+      <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0  dark:hover:bg-gray-700 dark:hover:text-white dark:md:hover:bg-transparent dark:md:hover:text-cyan-500">
+        {{ nav_page.title | escape }}
+      </a>
+    {%- endif -%}
+    </li>
+  {%- endfor -%}
+  </ul>
+
+</div>
 {%- endif -%}
