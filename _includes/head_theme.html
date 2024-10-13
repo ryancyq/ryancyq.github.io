@@ -1,0 +1,14 @@
+<script type="text/javascript">
+  const opted = 'color-theme' in localStorage
+  const optedDark = localStorage.getItem('color-theme') === 'dark'
+  const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const shouldBeDark = optedDark || (!opted && preferDark)
+  
+  function toggleTheme(event) {
+    const forceDark = event.target instanceof HTMLInputElement ? event.target.checked : !!event
+    document.documentElement.classList.toggle('dark', forceDark)
+    localStorage.setItem('color-theme', forceDark ? 'dark' : 'light')
+  }
+
+  toggleTheme(shouldBeDark)
+</script>
