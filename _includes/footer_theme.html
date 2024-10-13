@@ -1,4 +1,5 @@
 <script type="text/javascript">
   const cta = document.getElementById('theme-cta');
+  cta.checked = document.documentElement.classList.contains('dark')
   cta.addEventListener('change', toggleTheme)
 </script>
