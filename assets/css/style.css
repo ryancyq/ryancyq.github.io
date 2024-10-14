@@ -5,7 +5,7 @@
 @import "tailwindcss/components";
 
 @import "assets/css/pygments-github.css";
-@import "assets/css/pygments-tomorrow-bright.css" (prefers-color-scheme: dark);
+@import "assets/css/pygments-tomorrow-bright.css";
 
 @import "tailwindcss/utilities";
 

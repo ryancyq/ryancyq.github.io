@@ -1,3 +1,4 @@
+.dark { /* Tailwind CSS Dark Mode selector strategy */
 .highlight .hll { background-color: #424242 }
 .highlight  { background: #000000; color: #eaeaea }
 .highlight .c { color: #969896 } /* Comment */
@@ -63,3 +64,4 @@
 .highlight .vg { color: #d54e53 } /* Name.Variable.Global */
 .highlight .vi { color: #d54e53 } /* Name.Variable.Instance */
 .highlight .il { color: #e78c45 } /* Literal.Number.Integer.Long */
+}
