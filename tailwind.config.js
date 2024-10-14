@@ -13,7 +13,7 @@ module.exports = {
     'text-linkedin',
     'text-rss'
   ],
-  darkMode: 'class',
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
