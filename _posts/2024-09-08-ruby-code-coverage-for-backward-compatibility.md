@@ -15,7 +15,7 @@ In this post, I’ll share my experience maintaining a Ruby library across diffe
 These are the libraries being used in this project:
 - [SimpleCov] : A code coverage analysis tool for Ruby
 - [RSpec] : A behavior-driven development framework for Ruby
-- [Rake : A Ruby build utility similar to Make
+- [Rake] : A Ruby build utility similar to Make
 
 ### Code using different Ruby APIs
 
@@ -263,4 +263,4 @@ The final project structure should look like this:
 [SimpleCov]: https://github.com/simplecov-ruby/simplecov
 [RSpec]: https://github.com/rspec/rspec
 [Rake]: https://github.com/ruby/rake
-[Simple Cov Spawn Subprocesses Guide]: https://github.com/simplecov-ruby/simplecov?#running-simplecov-against-spawned-subprocesses
+[SimpleCov Spawn Subprocesses Guide]: https://github.com/simplecov-ruby/simplecov?#running-simplecov-against-spawned-subprocesses
