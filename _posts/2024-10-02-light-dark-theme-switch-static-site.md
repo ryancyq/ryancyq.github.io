@@ -17,24 +17,32 @@ Let's look at a simple light/dark theme switcher styled with [Tailwind CSS]. Sim
 
 **Demo**
 <div class="not-prose group/demo">
-  <nav class="flex justify-between items-center bg-gray-100 group-[.dark]/demo:bg-gray-800 p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
+  <nav class="flex justify-between items-center bg-gray-50 group-[.dark]/demo:bg-gray-800 p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
     <a href="#" class="text-gray-800 group-[.dark]/demo:text-gray-200">Playground</a>
-    <input id="theme-trigger" type="checkbox" class="hidden" />
-    <label for="theme-trigger" class="rounded p-2 hover:bg-gray-200 group-[.dark]/demo:hover:bg-gray-700">
-      <span class="sr-only">Switch to light / dark theme</span>
-      <!-- Moon Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 group-[.dark]/demo:hidden">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" class="fill-gray-500"/>
-      </svg>
-      <!-- Sun Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 hidden group-[.dark]/demo:block">
-        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          class="fill-gray-400"
-        />
-      </svg>
-    </label>
+    <div class="flex gap-x-2">
+      <div class="inline-flex items-center font-semibold text-cyan-600 group-[.dark]/demo:text-cyan-400">
+        Click Me
+        <svg class="rtl:rotate-180 size-4 ms-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+      </div>
+      <input id="theme-trigger" type="checkbox" class="hidden" />
+      <label for="theme-trigger" class="rounded p-2 hover:bg-gray-100 group-[.dark]/demo:hover:bg-gray-700">
+        <span class="sr-only">Switch to light / dark theme</span>
+        <!-- Moon Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 group-[.dark]/demo:hidden">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" class="fill-gray-500"/>
+        </svg>
+        <!-- Sun Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 hidden group-[.dark]/demo:block">
+          <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            class="fill-gray-400"
+          />
+        </svg>
+      </label>
+    </div>
   </nav>
   <script>
     const trigger = document.getElementById('theme-trigger');
