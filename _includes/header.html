@@ -11,11 +11,11 @@
       </a>
 
       {%- if site.page_sub_title and page.title and page.sub_title != false -%}
-      <svg class="flex-shrink-0 rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+      <svg class="hidden md:block flex-shrink-0 rtl:rotate-180 size-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
       </svg>
 
-      <a class="truncate md:hover:underline" href="#top" >
+      <a class="hidden md:block truncate md:hover:underline" href="#top" >
         <span class="text-xl font-medium whitespace-nowrap">
           {{ page.title | escape }}
         </span>

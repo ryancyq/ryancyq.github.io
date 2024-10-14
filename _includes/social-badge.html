@@ -4,7 +4,7 @@
 <a href="{{ url }}" title="{{ title }}" {% if platform != "rss" %}rel="me" {% endif %} class="text-{{platform}} lg:rounded-full lg:hover:bg-slate-100 dark:text-gray-500  dark:hover:text-white dark:lg:hover:bg-slate-700 p-1 md:p-2">
 
   <span class="sr-only">{{ title }}</span>
-  <svg class="w-6 h-6 md:w-5 md:h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+  <svg class="size-6 md:size-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
     <use href="{{ '/assets/social-icons.svg#' | append: platform | relative_url }}"></use>
   </svg>
 
