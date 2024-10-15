@@ -56,8 +56,11 @@ Let's look at a simple light/dark theme switcher styled with [Tailwind CSS]. Sim
       const forceDark = event.target instanceof HTMLInputElement ? event.target.checked : !!event
       demo.classList.toggle('dark', forceDark)
     }
+    const demoDark = document.documentElement.classList.contains('dark')
+    trigger.checked = demoDark
     trigger.addEventListener('change', triggerTheme)
-    trigger.checked = demo.classList.contains('dark')
+
+    triggerTheme(demoDark)
   </script>
 </div>
 
