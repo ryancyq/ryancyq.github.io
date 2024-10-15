@@ -35,7 +35,7 @@
 .highlight .nd { color: #70c0b1 } /* Name.Decorator */
 .highlight .ni { color: #eaeaea } /* Name.Entity */
 .highlight .ne { color: #d54e53 } /* Name.Exception */
-.highlight .nf { color: #7aa6da } /* Name.Function */
+.highlight .nf { color: #35c2d0 } /* Name.Function */
 .highlight .nl { color: #eaeaea } /* Name.Label */
 .highlight .nn { color: #e7c547 } /* Name.Namespace */
 .highlight .nx { color: #7aa6da } /* Name.Other */
@@ -50,6 +50,7 @@
 .highlight .mo { color: #e78c45 } /* Literal.Number.Oct */
 .highlight .sb { color: #b9ca4a } /* Literal.String.Backtick */
 .highlight .sc { color: #eaeaea } /* Literal.String.Char */
+.highlight .dl { color: #b9ca4a } /* Literal.String.Delimiter */
 .highlight .sd { color: #969896 } /* Literal.String.Doc */
 .highlight .s2 { color: #b9ca4a } /* Literal.String.Double */
 .highlight .se { color: #e78c45 } /* Literal.String.Escape */
