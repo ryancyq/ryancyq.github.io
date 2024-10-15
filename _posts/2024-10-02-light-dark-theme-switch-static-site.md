@@ -5,11 +5,16 @@ tags: [html, css, theme, dark-mode, tailwind-css]
 ---
 
 [Tailwind CSS] provides light/dark styling out of the box through its intuitive dark mode modifiers. By default, 
-[Tailwind CSS Dark Mode] uses the `prefers-color-scheme` CSS media feature from the browser, which serves as a good starting point for supporting light/dark themes on our static site.
+[Tailwind CSS Dark Mode] uses the [prefers-color-scheme] CSS media feature from the browser, which serves as a good starting point for supporting light/dark themes on our static site.
 
 However, to further improve our readers' experience, users should be able to indicate their preference for light/dark mode across their favorite sites. As a user, I always welcome utilities to customize my reading experience for different site domains.
 
 In this post, I'm going to share my experience of adding a light/dark theme switcher to a static site with minimal JavaScript involved.
+
+### Tailwind CSS Manual Dark Mode Toggle
+
+First, we need to move away from the default dark mode configuration that uses the `media` strategy. 
+As of this writing, [Tailwind CSS 3.4.1] offers two other strategies: `class` and `selector`. Both will work in our case, but the official documentation recommends the `selector` strategy ([Tailwind CSS manual dark mode](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually)).
 
 ### Simple Light/Dark Theme Switcher
 
@@ -159,4 +164,6 @@ And that's all you need to create a light/dark theme switcher for your static si
 [JavaScript-free Responsive Navigation Menu guide]: {% post_url 2024-08-10-collapsible-navigation-menu-without-js %}
 [Tailwind CSS]: https://tailwindcss.com
 [Tailwind CSS Dark Mode]: https://tailwindcss.com/docs/dark-mode
+[Tailwind CSS 3.4.1]: https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.1
+[prefers-color-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 [localStorage API]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
