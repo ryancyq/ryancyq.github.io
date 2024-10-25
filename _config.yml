@@ -18,6 +18,7 @@ plugins:
 
 nav_pages:
   - blog/index.html
+  - projects.md
   - resume.md
 page_sub_title: false
 
