@@ -16,7 +16,7 @@ Managing changelogs manually can be tedious and error-prone, especially for a pr
 These are the tools being used:
 - [Git-Cliff] : A highly customizable changelog generator built in Rust.
 - [GitHub Actions] : A CI/CD platform integrated with GitHub.
-- [github-signed-commit] : A GitHub Actions workflow that commit your files via [GitHub Graphql API] to guarantee verified commit on GitHub.
+- [github-signed-commit] : A GitHub Actions that commit your files via [GitHub Graphql API] to guarantee verified commit on GitHub.
 
 ### Initialize Cliff configuration
 
@@ -25,7 +25,7 @@ First, let's install `git-cliff` CLI to do so. I will use the `npm` package for 
 npm install -g git-cliff@latest
 ```
 
-Personally, I like the format `cocogitto` for its styling base on conventional_commits messages.
+Personally, I like the format `cocogitto` for its styling base on [conventional commits].
 ```bash
 git cliff --config cocogitto
 ```
@@ -95,9 +95,9 @@ sort_commits = "oldest"
 
 ## Running Git-Cliff
 
-Next, let's do a dry run for the changelog generation. For example, generating changelog for version `1.0.0` to the latest commit.
+Next, let's do a dry run for the changelog generation. For example, generating changelog from version `0.9.2` to the latest commit.
 ```bash
-git cliff v1.0.0..HEAD
+git cliff v0.9.2..HEAD
 ```
 
 The following output will be shown:
@@ -138,6 +138,7 @@ Next, let's create a GitHub Actions workflow file that handles both changelog ge
 
 {% raw %}
 ```yaml
+# changelog.yml
 name: Generate Changelog
 
 on:
@@ -179,12 +180,12 @@ jobs:
 ### How It Works
 
 1. The workflow triggers when the `CI` workflow has completed on the main branch or runs daily at midnight UTC
-2. [Git-Cliff] analyzes your git history and generates a formatted changelog based on conventional commits
+2. [Git-Cliff] analyzes your git history and generates a formatted changelog based on [conventional commits]
 3. [github-signed-commit] GitHub Action will commit `CHANGELOG.md` to the repository using [GitHub Graphql API] to guarantee verified commit on GitHub
 
 ### Best Practices
 
-1. Use conventional commits in your workflow:
+1. Use [conventional commits] in your workflow:
    - `feat:` for new features
    - `fix:` for bug fixes
    - `docs:` for documentation changes
@@ -206,3 +207,4 @@ Remember to adjust the configuration to match your project's needs and commit me
 [GitHub Actions]: https://github.com/features/actions
 [GitHub Graphql API]: https://docs.github.com/en/graphql
 [github-signed-commit]: https://github.com/marketplace/actions/github-signed-commit
+[conventional commits]: https://www.conventionalcommits.org/
