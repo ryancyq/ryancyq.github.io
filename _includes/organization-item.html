@@ -53,11 +53,13 @@
 
     <div class="flex gap-x-2 justify-between text-sm">
       
-      <span class="font-semibold">{{ experience.role }}</span>
+      {%- if experience.role -%}
+        <span class="font-semibold">{{ experience.role }}</span>
+      {%- endif -%}
 
-      <div class="">
-        {%- include experience-duration.html since = experience.since till = experience.till date_format = include.date_format -%}
-      </div>
+      {%- if experience.since -%}
+        <span>{%- include experience-duration.html since = experience.since till = experience.till date_format = include.date_format -%}</span>
+      {%- endif -%}
 
     </div>
 
