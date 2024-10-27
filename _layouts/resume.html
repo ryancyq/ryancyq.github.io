@@ -45,7 +45,7 @@ layout: document
 
   <div class="flex-col gap-y-4 print:gap-y-1 hidden print:flex">
 
-    {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
+    {%- assign sorted_projects = site.projects | where_exp: "project", "project.showcase contains 'resume'" | sort: 'till', 'last' | reverse -%}
     {%- if sorted_projects.size > 0 -%}
       <h2 class="experience-header text-xl print:text-base font-bold print:uppercase flex text-gray-900 dark:text-white print:text-black print:border-b print:border-black">
         Projects
