@@ -1,0 +1,35 @@
+---
+layout: base
+sub_title: false
+---
+
+<div class="flex flex-col gap-y-4 px-4 md:px-2 py-4">
+
+  <div class="flex flex-col gap-y-4">
+
+    <div class="prose prose-slate md:prose-lg dark:prose-invert max-w-none">
+      {{ content | markdownify }}
+    </div>
+
+  </div>
+
+  <div class="flex flex-col gap-y-4">
+
+    {%- assign sorted_projects = site.projects | sort: 'till', 'last' | reverse -%}
+    {%- if sorted_projects.size > 0 -%}
+      {%- if sorted_projects.size > 0-%}
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
+
+        {%- for project in sorted_projects -%}
+          <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+            {% include experience-item.html item = project %}
+          </div>
+        {%- endfor -%}
+
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+  </div>
+
+</div>
