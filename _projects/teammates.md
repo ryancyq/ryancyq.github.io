@@ -11,6 +11,10 @@ frameworks:
   - Selenium
   - MySQL
   - Google App Engine
+summary: A not-for-profit online peer feedback/evaluation platform designed for education institutions.
+showcase:
+  - resume
+  - projects
 ---
 
-A not-for-profit peer evaluation and feedback platform designed for education institutions with over 800,000 users from over 1,100 universities.
+A not-for-profit online peer feedback/evaluation platform designed for education institutions with over 800,000 users from over 1,100 universities.
