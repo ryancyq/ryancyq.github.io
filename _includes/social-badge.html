@@ -1,7 +1,7 @@
 {%- assign platform = include.platform -%}
 {%- assign title = include.title | default: platform -%}
 {%- assign url = include.url -%}
-<a href="{{ url }}" title="{{ title }}" {% if platform != "rss" %}rel="me" {% endif %} class="text-{{platform}} lg:rounded-full lg:hover:bg-slate-100 dark:text-gray-500  dark:hover:text-white dark:lg:hover:bg-slate-700 p-1 md:p-2">
+<a href="{{ url }}" title="{{ title }}" target="_blank" {% if platform != "rss" %}rel="me" {% endif %} class="text-{{platform}} lg:rounded-full lg:hover:bg-slate-100 dark:text-gray-500  dark:hover:text-white dark:lg:hover:bg-slate-700 p-1 md:p-2">
 
   <span class="sr-only">{{ title }}</span>
   <svg class="size-6 md:size-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
