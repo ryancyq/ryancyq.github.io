@@ -12,6 +12,8 @@ frameworks:
   - MSSQL
   - AppVeyor
   - VisualStudio
+name: aspnetboilerplate
+link: https://github.com/aspnetboilerplate/aspnetboilerplate
 summary: A general purpose application framework built on top of ASP.NET Core with SOLID design principles, supports multi-tenancy for SaaS applications.  
 showcase:
   - resume
