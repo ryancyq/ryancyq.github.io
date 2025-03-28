@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # Jekyll
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 4.4.1"
 
 # Use GitHub Pages compatible dependencies
 group :jekyll_plugins do
