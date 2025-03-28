@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Building a Static Site with Jekyll and Tailwind CSS
+title: Building a Static Site with Jekyll and Tailwind CSS v3
 tags: [ruby, jekyll, tailwind-css]
+modified_date: 28-03-2025
 ---
 
-[Jekyll] is an awesome tool for building static sites, whether it's for your personal blog or a hobby project. Adding [Tailwind CSS] into the mix makes creating your site even easier and way more visually appealing.
+[Jekyll] is an awesome tool for building static sites, whether it's for your personal blog or a hobby project. Adding [Tailwind CSS] 3.x into the mix makes creating your site even easier and way more visually appealing.
 
 One huge advantage of using Jekyll is the free hosting you get with [GitHub Pages] for public repositories. If you're cool with this setup, GitHub Pages is a no-brainer.
 
@@ -60,7 +61,7 @@ postcss:
 
 [Tailwind CSS] 3.x has the Just-In-Time (JIT) engine enabled by default. For more details, refer to the [Tailwind CSS JIT Migration guide].
 
-## Step 4: Install Node and Tailwind CSS
+## Step 4: Install Node and Tailwind CSS v3
 
 Next, install Node.js using `nvm` (recommended). Follow [`nvm` installation guide] to get it installed. 
 ```sh
@@ -96,7 +97,7 @@ module.exports = {
 }
 ```
 
-## Step 6: Create Tailwind Config
+## Step 6: Create Tailwind v3 Config
 
 Specify the content (Markdown and HTML files) for [Tailwind CSS] to detect the usage of CSS classes. Only the CSS classes that are used will be compiled into the output CSS file (`assets/css/main.css`).
 
@@ -150,7 +151,7 @@ Enjoy building your static site!
 [Deploy Jekyll to GitHub Pages with Tailwind CSS]: {% post_url 2024-07-30-deploy-jekyll-with-tailwindcss-via-github-actions %}
 
 [Jekyll]: https://jekyllrb.com/
-[Tailwind CSS]: https://tailwindcss.com/
+[Tailwind CSS]: https://v3.tailwindcss.com/
 [GitHub Pages]: https://docs.github.com/en/pages
 [PostCSS]: https://postcss.org/
 [cssnano]: https://cssnano.co/
