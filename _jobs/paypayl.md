@@ -14,7 +14,12 @@ tools:
   - GCP BigQuery/BigTable
   - GCP Dataflow/DataProc
   - DataDog
-  - OracleSQL
+  - Prometheus/PromQL
+  - Oracle SQL
 summary: |
-  - Led a pioneer project in transforming ETL data pipeline to Near-Real-Time..
+Driving innovation in real-time data processing at PayPal. I helped design and implement a Near Real-Time (NRT) data pipeline that reduced merchant data insights latency by over 80%. My focus is on building scalable, resilient, and observable data infrastructure, with monitoring powered by DataDog and Prometheus on GCP.
 ---
+
+- Designed and implemented a Near Real-Time (NRT) data pipeline using Apache Beam and GCP Dataflow, achieving over 80% reduction in merchant data insights latency.
+- Established observability standards for distributed data pipelines using DataDog dashboards, PromQL-based custom metrics, and GCP-native monitoring.
+- Led batch ETL correction workflows to enhance data consistency and system resilience across NRT and historical processing pipelines
