@@ -22,4 +22,4 @@ Driving innovation in real-time data processing at PayPal. I helped design and i
 
 - Designed and implemented a Near Real-Time (NRT) data pipeline using Apache Beam and GCP Dataflow, achieving over 80% reduction in merchant data insights latency.
 - Established observability standards for distributed data pipelines using DataDog dashboards, PromQL-based custom metrics, and GCP-native monitoring.
-- Led batch ETL correction workflows to enhance data consistency and system resilience across NRT and historical processing pipelines
+- Led batch ETL correction workflows to enhance data consistency and system resilience across NRT and historical processing pipelines.
