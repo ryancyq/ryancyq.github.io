@@ -24,12 +24,12 @@ tools:
   - Sentry
   - Stripe
 summary: |
-  - Implemented a self-served diagnostic tool for customer custom domain setup.
-  - Optimized the image process pipeline across formats, minimizing time taken between image upload and availability.
-  - Designed responsive components in Ember.js with asynchronous and paginated request handling for large dataset.
+  - Built and optimized customer-facing features and internal tooling for TradeGecko’s B2B commerce platform. 
+  - Delivered improvements in user experience, image processing, and payment success rates. 
+  - Contributed to both front-end and back-end systems, with a strong focus on performance, resilience, and usability.
 ---
 
-- Implemented a self-served diagnostic tool for customer custom domain setup, eliminating related customer support tickets and reducing ticket resolution time by 80%.
-- Optimized the image process pipeline with upload accuracy and efficiency improvements across formats, cutting corresponding job latency by 30% and minimizing time taken between image upload and availability.
-- Designed responsive components in Ember.js with asynchronous and paginated request handling for large dataset, reducing component render time by 40%.
-- Enhanced payment checkout flow with 3D Secure protocol through Stripe, empowering customers to improve transaction success rate by 15% with actionable insights into declined/rejected transactions.
+- Built a self-service diagnostic tool for customer domain setup, reducing related support tickets and cutting ticket resolution time by 80%.
+- Optimized the image processing pipeline for multiple formats, improving upload efficiency and reducing job latency by 30%.
+- Developed responsive UI components in Ember.js with paginated and asynchronous data fetching, reducing render times for large datasets by 40%.
+- Enhanced checkout flow by integrating Stripe’s 3D Secure protocol, improving transaction success rates by 15% and providing actionable insights into declines.
