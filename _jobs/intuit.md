@@ -21,14 +21,13 @@ tools:
   - Kubernetes
   - Splunk
 summary: |
-  - Developed new microservices in Kotlin/Java Spring Boot, integrated with GraphQL and Kafka in Kubernetes.
-  - Implemented an anti-corruption layer for distributed transactions to guarantee eventual consistency.
-  - Migrated existing authentication and authorization mechanisms over to an external authz service with Rego-based policies.
+  - Delivered scalable microservices powering QuickBooks Commerce with GraphQL and Kafka, impacting millions of customers globally. 
+  - Focused on resilient distributed systems, event-driven architecture, and fine-grained authorization using Rego policies. 
+  - Played a key role in CI/CD automation, progressive rollouts, and improving engineering velocity across time zones.
 ---
 
-- Developed new microservices in Kotlin/Java Spring Boot, integrated with GraphQL and Message Queue in Kubernetes, leveraging progressive rollouts to enable features for millions of customers.
-- Responsible for CI/CD setup for multiple isolated environments before production deployment, using a declarative GitOps continuous delivery tool to reduce time taken for deployment rollbacks.
-- Designed and implemented an anti-corruption layer for distributed transactions using two-phase commit Saga orchestration to guarantee eventual consistency, with smaller and faster local transactions.
-- Migrated existing authentication and authorization mechanisms to an external authz service with Rego-based policies, optimizing authorization decision caching with JWT validation to cut round-trip requests by 50%.
-- Led asynchronous scrum processes across diverse time zones, improving team velocity and code quality through constructive peer reviews.
-
+- Developed microservices in Kotlin/Java with Spring Boot, integrated with Apollo GraphQL and Apache Kafka, deployed via Kubernetes with progressive rollouts to support millions of users.
+- Set up CI/CD pipelines using GitOps (ArgoCD) for isolated environments, significantly reducing rollback time and deployment complexity.
+- Designed and implemented an anti-corruption layer for distributed transactions using two-phase commit Saga orchestration, optimizing for faster and localized data consistency.
+- Migrated internal auth mechanisms to an external authorization service using Open Policy Agent (Rego), reducing authorization round-trips by 50% via JWT caching strategies.
+- Facilitated asynchronous scrum practices across global teams, improving team velocity and code quality through active collaboration and peer code reviews.
