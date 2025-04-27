@@ -19,7 +19,10 @@ summary: |
   - Built apps supporting remote operations, network-challenged environments, and NFC-based transactions, enhancing digital access for education and travel safety use cases.
 ---
 
-- Designed and implemented cloud-based ASP.NET applications supporting campus safety systems and remote field operations, with energy-efficient communication for connected devices.
-- Led the development of a real-time Android chat app focused on user safety and incident escalation, engineered for reliable messaging in low-connectivity or restricted network environments.
-- Built a cross-platform mobile wallet using NFC technology and Apache Cordova, enabling digital disbursement of student financial aid via contactless payments.
-- Drove Agile delivery practices through sprint planning, story estimation, and iterative retrospectives to enhance team velocity and product feedback loops.
+- Designed and implemented cloud-native ASP.NET platforms for campus safety and field operations, optimizing communication protocols for energy-constrained IoT devices.
+
+- Led the end-to-end development of a real-time Android messaging app for user safety and incident escalation, with a focus on reliability in low-bandwidth conditions.
+
+- Developed a cross-platform NFC-based mobile wallet using Apache Cordova and Ionic Framework, streamlining digital disbursement of financial entitlements.
+
+- Championed Agile ceremonies, including sprint planning, backlog refinement, and retrospectives, to drive iterative product delivery.

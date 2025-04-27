@@ -29,7 +29,10 @@ summary: |
   - Contributed to both front-end and back-end systems, with a strong focus on performance, resilience, and usability.
 ---
 
-- Built a self-service diagnostic tool for customer domain setup, reducing related support tickets and cutting ticket resolution time by 80%.
-- Optimized the image processing pipeline for multiple formats, improving upload efficiency and reducing job latency by 30%.
-- Developed responsive UI components in Ember.js with paginated and asynchronous data fetching, reducing render times for large datasets by 40%.
-- Enhanced checkout flow by integrating Stripe’s 3D Secure protocol, improving transaction success rates by 15% and providing actionable insights into declines.
+- Developed a self-service DNS diagnostic tool for customer-managed domains, reducing support escalations and ticket resolution time by 80%.
+
+- Optimized image processing workflows across multiple formats, reducing background job latency by 30% and accelerating image availability in production.
+
+- Built responsive, data-intensive UI components in Ember.js, leveraging asynchronous pagination to reduce page rendering time by 40%.
+
+- Integrated Stripe 3D Secure 2.0 protocol enhancements, improving payment transaction success rates by 15% and providing actionable insights into declines.

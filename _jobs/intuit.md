@@ -26,8 +26,12 @@ summary: |
   - Played a key role in CI/CD automation, progressive rollouts, and improving engineering velocity across time zones.
 ---
 
-- Developed microservices in Kotlin/Java with Spring Boot, integrated with Apollo GraphQL and Apache Kafka, deployed via Kubernetes with progressive rollouts to support millions of users.
-- Set up CI/CD pipelines using GitOps (ArgoCD) for isolated environments, significantly reducing rollback time and deployment complexity.
-- Designed and implemented an anti-corruption layer for distributed transactions using two-phase commit Saga orchestration, optimizing for faster and localized data consistency.
-- Migrated internal auth mechanisms to an external authorization service using Open Policy Agent (Rego), reducing authorization round-trips by 50% via JWT caching strategies.
-- Facilitated asynchronous scrum practices across global teams, improving team velocity and code quality through active collaboration and peer code reviews.
+- Engineered scalable microservices in Kotlin/Java (Spring Boot), integrated with Apollo GraphQL and Apache Kafka event-driven systems, deployed via Kubernetes with progressive delivery to millions of customers worldwide.
+
+- Implemented GitOps-driven deployment workflows using ArgoCD, automating multi-environment rollouts and rollback strategies.
+
+- Designed and built an anti-corruption transactional orchestration layer using the Saga pattern to ensure distributed data consistency across services.
+
+- Migrated monolithic authentication systems to Open Policy Agent (OPA) with Rego policy evaluation, optimizing JWT caching to cut authorization latency by 50%.
+
+- Facilitated asynchronous scrum practices across global teams, improving team velocity and code quality through active collaboration and peer reviews.

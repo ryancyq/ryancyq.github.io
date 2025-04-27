@@ -21,6 +21,8 @@ summary: |
   - Focused on building scalable, resilient, and observable data infrastructure, with monitoring powered by DataDog and Prometheus on GCP.
 ---
 
-- Designed and implemented a Near Real-Time (NRT) data pipeline using Apache Beam and GCP Dataflow, achieving over 80% reduction in merchant data insights latency.
-- Established observability standards for distributed data pipelines using DataDog dashboards, PromQL-based custom metrics, and GCP-native monitoring.
-- Led batch ETL correction workflows to enhance data consistency and system resilience across NRT and historical processing pipelines
+- Architected and delivered a Near Real-Time (NRT) streaming data pipeline using Apache Beam on GCP Dataflow, improving merchant data insights latency by over 80%.
+
+- Built distributed pipeline observability with DataDog custom dashboards, PromQL metrics, and GCP Monitoring integrations, achieving 99.9% uptime SLAs.
+
+- Led the development of batch ETL correction pipelines to reinforce data resilience and support multi-modal (stream and batch) processing architectures.
