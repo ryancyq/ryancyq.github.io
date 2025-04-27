@@ -24,9 +24,9 @@ tools:
   - Sentry
   - Stripe
 summary: |
-  - Built and optimized customer-facing features and internal tooling for TradeGecko’s B2B commerce platform. 
-  - Delivered improvements in user experience, image processing, and payment success rates. 
-  - Contributed to both front-end and back-end systems, with a strong focus on performance, resilience, and usability.
+  - Built self-service DNS diagnostics to reduce domain-related support escalations.
+  - Optimized media processing workflows, cutting asset processing latency to improve customer experience.
+  - Developed scalable, responsive UI components in Ember.js, enabling efficient handling of large data sets.
 ---
 
 - Developed a self-service DNS diagnostic tool for customer-managed domains, reducing support escalations and ticket resolution time by 80%.

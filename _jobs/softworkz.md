@@ -15,8 +15,8 @@ frameworks:
   - Ionic Framework
   - DotNetNuke
 summary: |
-  - Architected and delivered mobile and cloud solutions with a focus on safety, financial access, and real-time communication. 
-  - Built apps supporting remote operations, network-challenged environments, and NFC-based transactions, enhancing digital access for education and travel safety use cases.
+  - Designed and developed cloud-based ASP.NET platforms and real-time Android communication apps focused on campus safety and field operations, optimized for network-constrained environments and reliable low-latency communication.
+  - Built NFC-enabled mobile wallet applications to streamline the digital disbursement of financial aid for educational institutions.
 ---
 
 - Designed and implemented cloud-native ASP.NET platforms for campus safety and field operations, optimizing communication protocols for energy-constrained IoT devices.

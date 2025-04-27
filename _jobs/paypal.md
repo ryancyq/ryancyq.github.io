@@ -16,9 +16,8 @@ tools:
   - Prometheus/PromQL
   - Oracle SQL
 summary: |
-  - Driving innovation in real-time data processing at PayPal. 
-  - Designed and implemented Near Real-Time (NRT) data pipelines that reduced merchant data insights latency by over 80%. 
-  - Focused on building scalable, resilient, and observable data infrastructure, with monitoring powered by DataDog and Prometheus on GCP.
+  - Designed and delivered Near Real-Time (NRT) data pipelines, boosting merchant data insights freshness through scalable processing with Apache Beam and Google Cloud.
+  - Built comprehensive observability frameworks using DataDog and GCP native tools to monitor distributed data platforms.
 ---
 
 - Architected and delivered a Near Real-Time (NRT) streaming data pipeline using Apache Beam on GCP Dataflow, improving merchant data insights latency by over 80%.

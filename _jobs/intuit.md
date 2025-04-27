@@ -21,9 +21,9 @@ tools:
   - Kubernetes
   - Splunk
 summary: |
-  - Delivered scalable microservices powering QuickBooks Commerce with GraphQL and Kafka, impacting millions of customers globally. 
-  - Focused on resilient distributed systems, event-driven architecture, and fine-grained authorization using Rego policies. 
-  - Played a key role in CI/CD automation, progressive rollouts, and improving engineering velocity across time zones.
+  - Established GitOps deployment workflows with ArgoCD, automating environment rollouts and rollback strategies.
+  - Designed distributed transaction orchestration using the Saga pattern to ensure eventual consistency across services.
+  - Led the migration to Open Policy Agent (OPA) for fine-grained, policy-driven authorization, reducing authentication latencies.
 ---
 
 - Engineered scalable microservices in Kotlin/Java (Spring Boot), integrated with Apollo GraphQL and Apache Kafka event-driven systems, deployed via Kubernetes with progressive delivery to millions of customers worldwide.
