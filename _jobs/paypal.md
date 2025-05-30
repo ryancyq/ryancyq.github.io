@@ -2,7 +2,7 @@
 country: Singapore
 org: PayPal Holdings, Inc.
 logo: paypal
-role: Staff Software Engineer
+role: Member of Technical Staff
 since: 2024-12-03
 
 frameworks:
