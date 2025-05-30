@@ -30,8 +30,6 @@ summary: |
 
 - Implemented GitOps-driven deployment workflows using ArgoCD, automating multi-environment rollouts and rollback strategies.
 
-- Designed and built an anti-corruption transactional orchestration layer using the Saga pattern to ensure distributed data consistency across services.
-
 - Migrated monolithic authentication systems to Open Policy Agent (OPA) with Rego policy evaluation, optimizing JWT caching to cut authorization latency by 50%.
 
 - Facilitated asynchronous scrum practices across global teams, improving team velocity and code quality through active collaboration and peer reviews.
