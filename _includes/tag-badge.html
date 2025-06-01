@@ -1,4 +1,4 @@
 {%- if include.tag -%}
 {%- assign tag_link = include.tag | prepend: '/topic/' | relative_url -%}
-  <a href="{{ tag_link }}" class="text-sm font-medium my-1 px-2.5 py-0.5 rounded text-nowrap bg-sky-50 text-cyan-600 dark:text-cyan-500 dark:bg-gray-800 md:hover:text-cyan-700 md:hover:bg-sky-200 dark:md:hover:text-cyan-800 dark:md:hover:bg-sky-300">#{{ include.tag }}</a>
+  <a href="{{ tag_link }}" class="text-sm font-medium my-1 px-2.5 py-0.5 rounded-xs text-nowrap bg-sky-50 text-cyan-600 dark:text-cyan-500 dark:bg-gray-800 md:hover:text-cyan-700 md:hover:bg-sky-200 dark:md:hover:text-cyan-800 dark:md:hover:bg-sky-300">#{{ include.tag }}</a>
 {%- endif -%}

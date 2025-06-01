@@ -21,7 +21,7 @@ sub_title: false
         <div class="flex flex-col md:flex-row md:flex-wrap gap-y-4 md:gap-x-6">
 
         {%- for project in sorted_projects -%}
-          <div class="md:basis-[48%] border rounded-lg bg-white border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="md:basis-(48%) border rounded-lg bg-white border-gray-200 shadow-xs dark:bg-gray-800 dark:border-gray-700">
             {% include project-item.html item = project %}
           </div>
         {%- endfor -%}

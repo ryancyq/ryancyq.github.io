@@ -32,7 +32,7 @@
   </label>
 
   {%- if nav_pages.size > 0 -%}
-  <label for="navbar-cta" class="inline-flex items-center justify-center p-2 md:hidden text-sm text-gray-500 rounded-lg md:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:md:hover:bg-gray-700 dark:focus:ring-gray-600">
+  <label for="navbar-cta" class="inline-flex items-center justify-center p-2 md:hidden text-sm text-gray-500 rounded-lg md:hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:md:hover:bg-gray-700 dark:focus:ring-gray-600">
 
     <span class="sr-only">Open main menu</span>
 
@@ -52,11 +52,11 @@
   {%- for nav_page in nav_pages -%}
     <li>
     {%- if nav_page.path == page.path  -%}
-      <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-white bg-cyan-700 md:bg-transparent md:text-cyan-700 md:p-0 md:dark:text-cyan-500" aria-current="page">
+      <a href="{{ nav_page.url | relative_url }}" class="block rounded-xs py-2 px-3 text-white bg-cyan-700 md:bg-transparent md:text-cyan-700 md:p-0 md:dark:text-cyan-500" aria-current="page">
         {{ nav_page.title | escape }}
       </a>
     {%- else -%}
-      <a href="{{ nav_page.url | relative_url }}" class="block rounded py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0  dark:hover:bg-gray-700 dark:hover:text-white dark:md:hover:bg-transparent dark:md:hover:text-cyan-500">
+      <a href="{{ nav_page.url | relative_url }}" class="block rounded-xs py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0  dark:hover:bg-gray-700 dark:hover:text-white dark:md:hover:bg-transparent dark:md:hover:text-cyan-500">
         {{ nav_page.title | escape }}
       </a>
     {%- endif -%}

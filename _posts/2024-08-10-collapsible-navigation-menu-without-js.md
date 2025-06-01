@@ -48,7 +48,7 @@ Next, let's add the hamburger menu for screens smaller than `md` using an HTML `
   <nav class="flex flex-wrap justify-between items-center bg-gray-50 dark:bg-gray-800 p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
     <a href="#">Playground</a>
     <div class="inline-flex gap-x-2 items-center">
-      <button class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+      <button class="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
         <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
@@ -67,7 +67,7 @@ Next, let's add the hamburger menu for screens smaller than `md` using an HTML `
 <nav class="flex flex-wrap justify-between items-center bg-gray-50 dark:bg-gray-800">
   <a href="#">Playground</a>
   <div class="inline-flex gap-x-2 items-center">
-    <button class="md:hidden rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+    <button class="md:hidden rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
       <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
       </svg>
@@ -88,7 +88,7 @@ Usually, handling the button `click` event to toggle menu visibility requires Ja
   <nav class="flex flex-wrap justify-between items-center bg-gray-50 dark:bg-gray-800 p-4 border border-2 rounded-lg border-gray-200 dark:border-gray-700">
     <a href="#">Playground</a>
     <input id="navbar-trigger-1" type="checkbox" class="hidden"/>
-    <label for="navbar-trigger-1" class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+    <label for="navbar-trigger-1" class="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
       <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
       </svg>
@@ -106,7 +106,7 @@ Usually, handling the button `click` event to toggle menu visibility requires Ja
 <nav class="flex flex-wrap justify-between items-center bg-gray-50 dark:bg-gray-800">
   <a href="#">Playground</a>
   <input id="navbar-trigger" type="checkbox" class="hidden"/>
-  <label for="navbar-trigger" class="md:hidden rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+  <label for="navbar-trigger" class="md:hidden rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
     <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
     </svg>
@@ -148,7 +148,7 @@ Using `peer-{modifiers}`, we can now hide the `<input>` and add the `peer/hambur
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
         </svg>
       </div>
-      <label for="navbar-trigger" class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+      <label for="navbar-trigger" class="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
         <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
@@ -168,7 +168,7 @@ Using `peer-{modifiers}`, we can now hide the `<input>` and add the `peer/hambur
 <nav class="flex flex-wrap justify-between items-center bg-gray-50 dark:bg-gray-800">
   <a href="#">Playground</a>
   <input id="navbar-trigger" type="checkbox" class="hidden peer/hamburger"/>
-  <label for="navbar-trigger" class="md:hidden rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+  <label for="navbar-trigger" class="md:hidden rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
     <svg class="size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
     </svg>
