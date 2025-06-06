@@ -4,8 +4,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-@import "./pygments-github.css";
-@import "./pygments-tomorrow-bright.css";
+@import "assets/css/pygments-github.css";
+@import "assets/css/pygments-tomorrow-bright.css";
 
 @import "tailwindcss/utilities";
 

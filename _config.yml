@@ -11,7 +11,7 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-postcss-v2
+  - jekyll-postcss
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll/tagging
