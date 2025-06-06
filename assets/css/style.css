@@ -1,13 +1,24 @@
 ---
 ---
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import "tailwindcss";
 
 @import "./pygments-github.css";
 @import "./pygments-tomorrow-bright.css";
 
-@import "tailwindcss/utilities";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-github: #1B1F22;
+  --color-linkedin: #0072b1;
+  --color-rss: #f66a0a;
+}
+
+@source inline("text-github");
+@source inline("text-linkedin");
+@source inline("text-rss");
 
 @media print {
   @page {

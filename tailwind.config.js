@@ -8,19 +8,8 @@ module.exports = {
     './*.md',
     './*.html',
   ],
-  safelist: [
-    'text-github',
-    'text-linkedin',
-    'text-rss'
-  ],
-  darkMode: 'selector',
   theme: {
     extend: {
-      colors: {
-        'github': '#1B1F22',
-        'linkedin': '#0072b1',
-        'rss': '#f66a0a'
-      },
       typography: {
         DEFAULT: {
           css:{
