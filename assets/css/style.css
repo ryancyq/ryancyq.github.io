@@ -1,13 +1,42 @@
 ---
 ---
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import "tailwindcss";
+@import "./pygments-github.css";
+@import "./pygments-tomorrow-bright.css";
 
-@import "assets/css/pygments-github.css";
-@import "assets/css/pygments-tomorrow-bright.css";
+@plugin "@tailwindcss/typography";
 
-@import "tailwindcss/utilities";
+/* Source scanning — paths relative to this CSS file (../../ = project root) */
+@source "../../_drafts/**/*.html";
+@source "../../_includes/**/*.html";
+@source "../../_layouts/**/*.html";
+@source "../../_posts/*.md";
+@source "../../blog/index.html";
+@source "../../*.md";
+@source "../../*.html";
+
+/* Safelist for dynamic Liquid class names: class="text-{{platform}}" */
+@source inline("text-github");
+@source inline("text-linkedin");
+@source inline("text-rss");
+
+/* Class-based dark mode: JS toggles .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom social brand colours (replaces tailwind.config.js theme.extend.colors) */
+@theme {
+  --color-github: #1B1F22;
+  --color-linkedin: #0072b1;
+  --color-rss: #f66a0a;
+}
+
+/* Remove backtick quotes from inline code
+   (replaces tailwind.config.js typography customisation) */
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+  content: "";
+}
 
 @media print {
   @page {

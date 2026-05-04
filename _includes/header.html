@@ -4,14 +4,14 @@
 
     <div class="flex items-baseline gap-x-2 max-w-xs md:max-w-lg dark:text-white">
 
-      <a class="flex-shrink-0 space-x-3 rtl:space-x-reverse" rel="author" href="{{ "/" | relative_url }}" >
+      <a class="shrink-0 space-x-3 rtl:space-x-reverse" rel="author" href="{{ "/" | relative_url }}" >
         <span class="self-center text-2xl font-semibold whitespace-nowrap">
           {{ site.title | escape }}
         </span>
       </a>
 
       {%- if site.page_sub_title and page.title and page.sub_title != false -%}
-      <svg class="hidden md:block flex-shrink-0 rtl:rotate-180 size-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+      <svg class="hidden md:block shrink-0 rtl:rotate-180 size-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
       </svg>
 
