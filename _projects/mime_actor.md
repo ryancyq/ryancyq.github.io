@@ -6,6 +6,5 @@ name: mime_actor
 link: https://github.com/ryancyq/mime_actor
 summary: A utility library for Action processing with Callback + Rescue handlers for different MIME types in Rails.
 showcase:
-  - resume
   - projects
 ---
