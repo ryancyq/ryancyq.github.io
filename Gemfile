@@ -10,7 +10,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15"
   gem "jekyll-paginate", "~> 1.1"
   gem "jekyll-postcss", "~> 0.5.0"
-  gem "jekyll-seo-tag", "~> 2.7"
+  gem "jekyll-seo-tag", "~> 2.9"
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-tagging", "~> 1.1"
 end
